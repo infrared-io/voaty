@@ -1,0 +1,440 @@
+{
+  "id": "voaty_my_account",
+  "controller": {
+    "supportedInterfaceOrientations": "UIInterfaceOrientationPortrait | UIInterfaceOrientationPortraitUpsideDown",
+    "title": "My Account",
+    "preferredStatusBarStyle": "UIStatusBarStyleLightContent",
+    "navigationController": {
+      "autoAddIfNeeded": true,
+      "hideNavigationBar": false,
+      "navigationBarTranslucent": true,
+      "navigationBarTintColor": "#ffffff00",
+      "navigationTintColor": "#ffffff",
+      "navigationTitleColor": "#ffffff",
+      "navigationTitleFont": "HelveticaNeue-Light, 22",
+      "backIndicatorImage": "back_arrow@2x.png",
+      "backIndicatorNoText": true
+    },
+    "keyboardManager": {
+      "enable": true,
+      "enableAutoToolbar": false
+    }
+  },
+  "view": {
+    "id": "whole_ui",
+    "type": "view",
+    "backgroundColor": "#404040",
+    "subviews": [
+      {
+        "id": "content_wrapper",
+        "type": "view",
+        "subviews": [
+          {
+            "id": "screen_background",
+            "type": "imageView",
+            "image": "all_background.png"
+          },
+          {
+            "id": "user_info_wrapper",
+            "type": "view",
+            "subviews": [
+              {
+                "id": "user_image",
+                "type": "imageView",
+                "backgroundColor": "#808080",
+                "cornerRadius": 9,
+                "borderColor": "#ffffff",
+                "borderWidth": 1,
+                "dataBinding": [
+                  {
+                    "property": "image",
+                    "data": "this.profilePicture"
+                  }
+                ]
+              },
+              {
+                "id": "username_button",
+                "type": "button",
+                "normalTitleColor": "#ffffff",
+                "font": "HelveticaNeue-Light, 18",
+                "touchUpInsideActions": "this.showUser();",
+                "dataBinding": [
+                  {
+                    "property": "normalTitle",
+                    "data": "this.username"
+                  }
+                ]
+              },
+              {
+                "id": "username_button_underline",
+                "type": "view",
+                "backgroundColor": "#ffffffaa"
+              },
+              {
+                "id": "bio_label",
+                "type": "label",
+                "textAlignment": "NSTextAlignmentLeft",
+                "textColor": "#ffffff",
+                "font": "HelveticaNeue-Light, 16",
+                "numberOfLines": 0,
+                "adjustsFontSizeToFitWidth": true,
+                "minimumScaleFactor": 0.5,
+                "lineBreakMode": "NSLineBreakByTruncatingTail",
+                "dataBinding": [
+                  {
+                    "property": "text",
+                    "data": "this.bio"
+                  }
+                ]
+              }
+            ],
+            "constraints": [
+              {
+                "visualFormat": "H:[user_image(==92)]"
+              },
+              {
+                "withItem": "user_image",
+                "withItemAttribute": "NSLayoutAttributeCenterX",
+                "relatedBy": "NSLayoutRelationEqual",
+                "toItem": "user_info_wrapper",
+                "toItemAttribute": "NSLayoutAttributeCenterX",
+                "multiplier": "1",
+                "constant": "0"
+              },
+              {
+                "visualFormat": "H:[username_button]"
+              },
+              {
+                "withItem": "username_button",
+                "withItemAttribute": "NSLayoutAttributeCenterX",
+                "relatedBy": "NSLayoutRelationEqual",
+                "toItem": "user_info_wrapper",
+                "toItemAttribute": "NSLayoutAttributeCenterX",
+                "multiplier": "1",
+                "constant": "0"
+              },
+              {
+                "visualFormat": "H:|-16-[bio_label]-16-|"
+              },
+              {
+                "withItem": "bio_label",
+                "withItemAttribute": "NSLayoutAttributeCenterX",
+                "relatedBy": "NSLayoutRelationEqual",
+                "toItem": "user_info_wrapper",
+                "toItemAttribute": "NSLayoutAttributeCenterX",
+                "multiplier": "1",
+                "constant": "0"
+              },
+              {
+                "visualFormat": "V:|-72-[user_image(==92)]"
+              },
+              {
+                "visualFormat": "V:|-72-[user_image(==92)]-16-[username_button(==20)]-0-[username_button_underline(==0.5)]-0-[bio_label(==72)]-0-|"
+              },
+              {
+                "withItem": "username_button_underline",
+                "withItemAttribute": "NSLayoutAttributeWidth",
+                "relatedBy": "NSLayoutRelationEqual",
+                "toItem": "username_button",
+                "toItemAttribute": "NSLayoutAttributeWidth",
+                "multiplier": "1",
+                "constant": ""
+              },
+              {
+                "withItem": "username_button_underline",
+                "withItemAttribute": "NSLayoutAttributeLeading",
+                "relatedBy": "NSLayoutRelationEqual",
+                "toItem": "username_button",
+                "toItemAttribute": "NSLayoutAttributeLeading",
+                "multiplier": "1",
+                "constant": ""
+              }
+            ]
+          },
+          {
+            "id" : "sing_in_scroll_view",
+            "type" : "scrollView",
+            "backgroundColor_": "#ff000080",
+            "autoLayoutKeyboardHandling_": true,
+            "subviews": [
+              {
+                "id": "internal_view",
+                "type": "view",
+                "backgroundColor_": "#00ff0080",
+                "subviews": [
+                  {
+                    "id": "logo_image",
+                    "type": "imageView",
+                    "image": "voat-goat.png"
+                  },
+                  {
+                    "id": "username_tf",
+                    "type": "textField",
+                    "backgroundColor": "#ff000000",
+                    "textColor": "#ffffff",
+                    "placeholder": "Username",
+                    "placeholderColor": "#a0a0a0",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "borderStyle": "UITextBorderStyleNone",
+                    "keyboardType_": "UIKeyboardTypeEmailAddress",
+                    "autocapitalizationType": "UITextAutocapitalizationTypeNone",
+                    "autocorrectionType": "UITextAutocorrectionTypeNo",
+                    "font": "HelveticaNeue-Light, 16",
+                    "returnKeyType": "UIReturnKeyDone",
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "mode": "twoWay",
+                        "data": "this.username"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "username_separator_line",
+                    "type": "view",
+                    "backgroundColor": "#ffffff"
+                  },
+                  {
+                    "id": "pass_tf",
+                    "type": "textField",
+                    "backgroundColor": "#ff000000",
+                    "textColor": "#ffffff",
+                    "placeholder": "Password",
+                    "placeholderColor": "#a0a0a0",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "borderStyle": "UITextBorderStyleNone",
+                    "font": "HelveticaNeue-Light, 16",
+                    "returnKeyType": "UIReturnKeyDone",
+                    "secureTextEntry": true,
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "mode": "twoWay",
+                        "data": "this.password"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "pass_separator_line",
+                    "type": "view",
+                    "backgroundColor": "#ffffff"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "visualFormat": "H:[logo_image(==157)]"
+                  },
+                  {
+                    "withItem": "logo_image",
+                    "withItemAttribute": "NSLayoutAttributeCenterX",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "internal_view",
+                    "toItemAttribute": "NSLayoutAttributeCenterX",
+                    "multiplier": "1",
+                    "constant": "0"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[username_tf]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[username_separator_line]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[pass_tf]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[pass_separator_line]-16-|"
+                  },
+                  {
+                    "visualFormat": "V:|-20-[logo_image(==115)]-30-[username_tf(==30)]-0-[username_separator_line(==0.5)]-20-[pass_tf(==30)]-0-[pass_separator_line(==0.5)]-16-|"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "blockedSubversesHolder",
+            "type": "view",
+            "subviews": [
+              {
+                "id": "blockedSubversesButton",
+                "type": "button",
+                "normalTitle": "Blocked Subverses",
+                "normalTitleColor" : "#ffffff",
+                "font" : "HelveticaNeue-Thin, 18",
+                "touchUpInsideActions": "this.showBlockedSubverses();"
+              },
+              {
+                "id": "blockedSubversesButtonUnderline",
+                "type": "view",
+                "backgroundColor": "#ffffffaa"
+              }
+            ],
+            "constraints": [
+              {
+                "visualFormat": "V:|-0-[blockedSubversesButton(==30)]-0-|"
+              },
+              {
+                "visualFormat": "V:[blockedSubversesButton]-(-4)-[blockedSubversesButtonUnderline(==0.5)]"
+              },
+              {
+                "withItem": "blockedSubversesButton",
+                "withItemAttribute": "NSLayoutAttributeCenterX",
+                "relatedBy": "NSLayoutRelationEqual",
+                "toItem": "blockedSubversesHolder",
+                "toItemAttribute": "NSLayoutAttributeCenterX",
+                "multiplier": "1",
+                "constant": ""
+              },
+              {
+                "withItem": "blockedSubversesButtonUnderline",
+                "withItemAttribute": "NSLayoutAttributeWidth",
+                "relatedBy": "NSLayoutRelationEqual",
+                "toItem": "blockedSubversesButton",
+                "toItemAttribute": "NSLayoutAttributeWidth",
+                "multiplier": "1",
+                "constant": ""
+              },
+              {
+                "withItem": "blockedSubversesButtonUnderline",
+                "withItemAttribute": "NSLayoutAttributeLeading",
+                "relatedBy": "NSLayoutRelationEqual",
+                "toItem": "blockedSubversesButton",
+                "toItemAttribute": "NSLayoutAttributeLeading",
+                "multiplier": "1",
+                "constant": ""
+              }
+            ]
+          },
+          {
+            "id": "appInfoHolder",
+            "type": "view",
+            "subviews": [
+              {
+                "id": "aboutAppButton",
+                "type": "button",
+                "normalTitle": "About",
+                "normalTitleColor" : "#ffffff",
+                "font" : "HelveticaNeue-Thin, 18",
+                "touchUpInsideActions": "this.showAbout();"
+              },
+              {
+                "id": "aboutAppButtonUnderline",
+                "type": "view",
+                "backgroundColor": "#ffffffaa"
+              }
+            ],
+            "constraints": [
+              {
+                "visualFormat": "V:|-0-[aboutAppButton(==30)]-0-|"
+              },
+              {
+                "visualFormat": "V:[aboutAppButton]-(-4)-[aboutAppButtonUnderline(==0.5)]"
+              },
+              {
+                "withItem": "aboutAppButton",
+                "withItemAttribute": "NSLayoutAttributeCenterX",
+                "relatedBy": "NSLayoutRelationEqual",
+                "toItem": "appInfoHolder",
+                "toItemAttribute": "NSLayoutAttributeCenterX",
+                "multiplier": "1",
+                "constant": ""
+              },
+              {
+                "withItem": "aboutAppButtonUnderline",
+                "withItemAttribute": "NSLayoutAttributeWidth",
+                "relatedBy": "NSLayoutRelationEqual",
+                "toItem": "aboutAppButton",
+                "toItemAttribute": "NSLayoutAttributeWidth",
+                "multiplier": "1",
+                "constant": ""
+              },
+              {
+                "withItem": "aboutAppButtonUnderline",
+                "withItemAttribute": "NSLayoutAttributeLeading",
+                "relatedBy": "NSLayoutRelationEqual",
+                "toItem": "aboutAppButton",
+                "toItemAttribute": "NSLayoutAttributeLeading",
+                "multiplier": "1",
+                "constant": ""
+              }
+            ]
+          }
+        ],
+        "constraints" : [
+          {
+            "visualFormat": "H:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[user_info_wrapper]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[user_info_wrapper]"
+          },
+          {
+            "visualFormat": "H:|-0-[sing_in_scroll_view]-0-|"
+          },
+          {
+            "visualFormat": "V:|-64-[sing_in_scroll_view]"
+          },
+          {
+            "visualFormat": "H:|-0-[blockedSubversesHolder]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[appInfoHolder]-0-|"
+          },
+          {
+            "visualFormat": "V:[blockedSubversesHolder]-24-[appInfoHolder]-16-|"
+          },
+          {
+            "withItem": "internal_view",
+            "withItemAttribute": "NSLayoutAttributeLeading",
+            "relatedBy": "NSLayoutRelationEqual",
+            "toItem": "content_wrapper",
+            "toItemAttribute": "NSLayoutAttributeLeading",
+            "multiplier": "1",
+            "constant": "0"
+          },
+          {
+            "withItem": "internal_view",
+            "withItemAttribute": "NSLayoutAttributeTrailing",
+            "relatedBy": "NSLayoutRelationEqual",
+            "toItem": "content_wrapper",
+            "toItemAttribute": "NSLayoutAttributeTrailing",
+            "multiplier": "1",
+            "constant": "0"
+          },
+          {
+            "withItem_": "internal_view",
+            "withItemAttribute": "NSLayoutAttributeHeight",
+            "relatedBy": "NSLayoutRelationEqual",
+            "toItem_": "content_wrapper",
+            "toItemAttribute": "NSLayoutAttributeHeight",
+            "multiplier": "1",
+            "constant": "-64"
+          },
+          {
+            "withItem": "sing_in_scroll_view",
+            "withItemAttribute": "NSLayoutAttributeHeight",
+            "relatedBy": "NSLayoutRelationEqual",
+            "toItem": "internal_view",
+            "toItemAttribute": "NSLayoutAttributeHeight",
+            "multiplier": "1",
+            "constant": "0"
+          }
+        ]
+      }
+    ],
+    "constraints": [
+      {
+        "visualFormat": "H:|-0-[content_wrapper]-0-|"
+      },
+      {
+        "visualFormat": "V:|-(-64)-[content_wrapper]-0-|"
+      }
+    ]
+  }
+}

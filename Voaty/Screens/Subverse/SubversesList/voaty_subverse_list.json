@@ -1,0 +1,302 @@
+{
+  "id": "voaty_subverse_list",
+  "controller": {
+    "supportedInterfaceOrientations": "UIInterfaceOrientationPortrait | UIInterfaceOrientationPortraitUpsideDown",
+    "title": "Top 200",
+    "preferredStatusBarStyle": "UIStatusBarStyleLightContent",
+    "navigationController": {
+      "autoAddIfNeeded": true,
+      "hideNavigationBar": false,
+      "navigationBarTranslucent": true,
+      "navigationBarTintColor": "#ffffff00",
+      "navigationTintColor": "#ffffff",
+      "navigationTitleColor": "#ffffff",
+      "navigationTitleFont": "HelveticaNeue-Light, 22",
+      "backIndicatorImage": "back_arrow@2x.png",
+      "backIndicatorNoText": true,
+      "leftBarButtonItem": {
+        "id": "right_bar_button",
+        "type": "barButtonItem",
+        "style": "UIBarButtonItemStyleBordered",
+        "title": "Close",
+        "actions": "this.close();"
+      },
+      "rightBarButtonItem_": {
+        "id": "right_bar_button",
+        "type": "barButtonItem",
+        "style": "UIBarButtonItemStyleBordered",
+        "customView": {
+          "id": "right_bar_inner_button",
+          "type": "button",
+          "frame": {
+            "x": -4,
+            "y": -4,
+            "width": 30,
+            "height": 30
+          },
+          "normalTitle": "↺",
+          "font": "Arial, 24",
+          "touchUpInsideActions": "this.reloadSubverseList();"
+        }
+      }
+    }
+  },
+  "view": {
+    "id": "whole_ui",
+    "type": "view",
+    "backgroundColor_": "#404040",
+    "subviews": [
+      {
+        "id": "content_wrapper",
+        "type": "view",
+        "subviews": [
+          {
+            "id": "screen_background",
+            "type": "imageView",
+            "image": "all_background.png"
+          },
+          {
+            "id": "header_background",
+            "type": "view"
+          },
+          {
+            "id": "subverse_table_view",
+            "type": "tableView",
+            "rowHeight": 44,
+            "alwaysBounceVertical": true,
+            "separatorStyle": "UITableViewCellSeparatorStyleNone",
+            "autoLayoutKeyboardHandling": true,
+            "selectRowAction": "this.selectSubverse(data);",
+            "dataBinding": [
+              {
+                "property": "tableData",
+                "data": "this.tableData"
+              }
+            ],
+            "subviews": [
+              {
+                "id": "refreshControl",
+                "type": "refreshControl",
+                "tintColor": "#ffffff",
+                "valueChangedActions": "this.pullToRefreshData(control, event);"
+              }
+            ],
+            "tableHeaderView" : {
+              "id" : "tableHeaderView1",
+              "type" : "view",
+              "frame" : {
+                "x" : 0,
+                "y" : 0,
+                "width" : 0,
+                "height" : 40
+              },
+              "subviews" : [
+                {
+                  "id" : "backgroundWithBorder",
+                  "type" : "view",
+                  "cornerRadius" : 16,
+                  "borderColor" : "#a0a0a0",
+                  "borderWidth" : 1
+                },
+                {
+                  "id" : "searchTextField",
+                  "type" : "textField",
+                  "textColor" : "#ffffff",
+                  "font" : "HelveticaNeue-Light, 18",
+                  "returnKeyType": "UIReturnKeyDone",
+                  "dataBinding": [
+                    {
+                      "property": "text",
+                      "mode": "twoWay",
+                      "data": "this.searchText"
+                    }
+                  ]
+                },
+                {
+                  "id": "clearButton",
+                  "type": "button",
+                  "normalTitle": "×",
+                  "font": "Arial, 32",
+                  "normalTitleColor": "#ffffff",
+                  "touchUpInsideActions": "this.clearSearchForSubverseList();"
+                }
+              ],
+              "constraints" : [
+                {
+                  "visualFormat": "H:|-16-[backgroundWithBorder]-16-|"
+                },
+                {
+                  "visualFormat": "V:|-2-[backgroundWithBorder]-4-|"
+                },
+                {
+                  "visualFormat": "H:|-32-[searchTextField]-0-[clearButton(==35)]-20-|"
+                },
+                {
+                  "visualFormat": "V:|-2-[searchTextField]-4-|"
+                },
+                {
+                  "visualFormat": "V:|-2-[clearButton]-4-|"
+                }
+              ]
+            },
+            "cells": [
+              {
+                "id": "subverse_cell_without_image",
+                "type": "tableViewCell",
+                "selectionStyle": "UITableViewCellSelectionStyleNone",
+                "subviews": [
+                  {
+                    "id": "titleLabel",
+                    "type": "label",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "backgroundColor": "#ff000000",
+                    "font": "HelveticaNeue-Light, 18",
+                    "numberOfLines": 0,
+                    "lineBreakMode": "NSLineBreakByTruncatingTail",
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "data": "cell.title"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 1000,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisVertical"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "bottom_cell_separator",
+                    "type": "view",
+                    "backgroundColor": "#a0a0a0"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "visualFormat": "H:|-16-[titleLabel]-16-|"
+                  },
+                  {
+                    "visualFormat": "V:|-0-[titleLabel]-0-[bottom_cell_separator(==0.5)]-0-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[bottom_cell_separator]-0-|"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "subverse_by_name",
+            "type": "view",
+            "backgroundColor_": "#ff000040",
+            "hidden": true,
+            "subviews": [
+              {
+                "id": "subverse_label",
+                "type": "label",
+                "text": "Name",
+                "font": "HelveticaNeue-Light, 16",
+                "textColor": "#c0c0c0",
+                "gestureRecognizers": [
+                  {
+                    "id" : "tapGROnUrlLabel",
+                    "gestureType" : "tap",
+                    "numberOfTapsRequired" : 1,
+                    "numberOfTouchesRequired" : 1,
+                    "gestureActions" : "this.putFocusOnName();"
+                  }
+                ]
+              },
+              {
+                "id": "subverse_tf",
+                "type": "textField",
+                "backgroundColor_": "#ff000000",
+                "textColor": "#ffffff",
+                "textAlignment": "NSTextAlignmentLeft",
+                "borderStyle": "UITextBorderStyleNone",
+                "keyboardType": "UIKeyboardTypeURL",
+                "autocapitalizationType": "UITextAutocapitalizationTypeNone",
+                "autocorrectionType": "UITextAutocorrectionTypeNo",
+                "keyboardAppearance_": "UIKeyboardAppearanceDark",
+                "font": "HelveticaNeue-Light, 16",
+                "dataBinding": [
+                  {
+                    "property": "text",
+                    "mode": "twoWay",
+                    "data": "this.subverseName"
+                  }
+                ]
+              },
+              {
+                "id": "subverse_button",
+                "type": "button",
+                "cornerRadius" : 13,
+                "borderColor" : "#a0a0a0",
+                "borderWidth" : 1,
+                "normalTitle": "Open",
+                "font": "HelveticaNeue-Light, 16",
+                "touchUpInsideActions": "this.openSubverse();"
+              },
+              {
+                "id": "subverse_separator_line",
+                "type": "view",
+                "backgroundColor": "#ffffffaa"
+              }
+            ],
+            "constraints": [
+              {
+                "visualFormat": "H:|-16-[subverse_label]-16-|"
+              },
+              {
+                "visualFormat": "H:|-16-[subverse_tf]-0-[subverse_button(==70)]-16-|"
+              },
+              {
+                "visualFormat": "H:|-16-[subverse_separator_line]-16-|"
+              },
+              {
+                "visualFormat": "V:|-8-[subverse_label(==20)]-0-[subverse_tf(==30)]-0-[subverse_separator_line(==0.5)]"
+              },
+              {
+                "visualFormat": "V:[subverse_label]-0-[subverse_button(==26)]-4-[subverse_separator_line(==0.5)]"
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "visualFormat": "H:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[header_background]-(-2)-|"
+          },
+          {
+            "visualFormat": "H:|-0-[subverse_table_view]-(-2)-|"
+          },
+          {
+            "visualFormat": "V:|-0-[header_background(==64)]-0-[subverse_table_view]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[subverse_by_name]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[header_background(==64)]-0-[subverse_by_name]-0-|"
+          }
+        ]
+      }
+    ],
+    "constraints": [
+      {
+        "visualFormat": "H:|-0-[content_wrapper]-0-|"
+      },
+      {
+        "visualFormat": "V:|-(-64)-[content_wrapper]-0-|"
+      }
+    ]
+  }
+}

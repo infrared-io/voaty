@@ -1,0 +1,78 @@
+{
+  "id": "voaty",
+  "screens": [
+    {
+      "deviceType": "phone",
+      "path": "voaty_subverse.json",
+      "jsPluginPath": "voaty_subverse_plugin.js, voaty_user_agreement.js"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_subverse_list.json",
+      "jsPluginPath": "voaty_subverse_list_plugin.js"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_submission.json",
+      "jsPluginPath": "voaty_submission_plugin.js"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_submission_content.json",
+      "jsPluginPath": "voaty_submission_content_plugin.js"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_submission_comment.json",
+      "jsPluginPath": "voaty_submission_comment_plugin.js"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_share_a_link.json",
+      "jsPluginPath": "voaty_share_a_link_plugin.js"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_discuss.json",
+      "jsPluginPath": "voaty_discuss_plugin.js"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_user.json",
+      "jsPluginPath": "voaty_user_plugin.js"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_my_account.json",
+      "jsPluginPath": "voaty_my_account_plugin.js"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_report.json",
+      "jsPluginPath": "voaty_report_plugin.js"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_blocked_subverses.json",
+      "jsPluginPath": "voaty_blocked_subverses_plugin.js"
+    }
+  ],
+  "jsLibraries": [
+    "VoatyUtil.js",
+    "VoatyGlobalData.js",
+    "VoatyNetworkCommunication.js",
+    "superagent.min.js",
+    "uuid.js",
+    "url-tld.min.js",
+    "http://www.google-analytics.com/analytics.js"
+  ],
+  "mainScreenId": "voaty_subverse",
+  "i18n": {
+    "default": "en",
+    "languages": {
+      "en": "voaty_en.json"
+    }
+  },
+  "silentUpdate": true,
+  "version": 20151007121013
+}

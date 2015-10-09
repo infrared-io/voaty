@@ -1,0 +1,897 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		155798761B570C5300ACB436 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 155798751B570C5300ACB436 /* main.m */; };
+		155798791B570C5300ACB436 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 155798781B570C5300ACB436 /* AppDelegate.m */; };
+		155798811B570C5300ACB436 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 155798801B570C5300ACB436 /* Images.xcassets */; };
+		155798901B570C5400ACB436 /* VoatyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1557988F1B570C5400ACB436 /* VoatyTests.m */; };
+		155798A81B570CDC00ACB436 /* voaty_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 1557989A1B570CDC00ACB436 /* voaty_en.json */; };
+		155798AD1B570CDC00ACB436 /* voaty_submission.json in Resources */ = {isa = PBXBuildFile; fileRef = 155798A21B570CDC00ACB436 /* voaty_submission.json */; };
+		155798AF1B570CDC00ACB436 /* voaty_subverse.json in Resources */ = {isa = PBXBuildFile; fileRef = 155798A51B570CDC00ACB436 /* voaty_subverse.json */; };
+		155798B11B570CDC00ACB436 /* voaty_app.json in Resources */ = {isa = PBXBuildFile; fileRef = 155798A71B570CDC00ACB436 /* voaty_app.json */; };
+		155798CA1B5718E500ACB436 /* all_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798B31B5718E500ACB436 /* all_background.png */; };
+		155798CB1B5718E500ACB436 /* back_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798B41B5718E500ACB436 /* back_arrow@2x.png */; };
+		155798CC1B5718E500ACB436 /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798B71B5718E500ACB436 /* app_icon.png */; };
+		155798CD1B5718E500ACB436 /* icon_design.afdesign in Resources */ = {isa = PBXBuildFile; fileRef = 155798B81B5718E500ACB436 /* icon_design.afdesign */; };
+		155798CF1B5718E500ACB436 /* ipad_app.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798BA1B5718E500ACB436 /* ipad_app.png */; };
+		155798D01B5718E500ACB436 /* ipad_app@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798BB1B5718E500ACB436 /* ipad_app@2x.png */; };
+		155798D11B5718E500ACB436 /* ipad_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798BC1B5718E500ACB436 /* ipad_settings.png */; };
+		155798D21B5718E500ACB436 /* ipad_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798BD1B5718E500ACB436 /* ipad_settings@2x.png */; };
+		155798D31B5718E500ACB436 /* ipad_spotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798BE1B5718E500ACB436 /* ipad_spotlight.png */; };
+		155798D41B5718E500ACB436 /* ipad_spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798BF1B5718E500ACB436 /* ipad_spotlight@2x.png */; };
+		155798D51B5718E500ACB436 /* iphone_app@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798C01B5718E500ACB436 /* iphone_app@2x.png */; };
+		155798D61B5718E500ACB436 /* iphone_app@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798C11B5718E500ACB436 /* iphone_app@3x.png */; };
+		155798D71B5718E500ACB436 /* iphone_spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798C21B5718E500ACB436 /* iphone_spotlight@2x.png */; };
+		155798D81B5718E500ACB436 /* iphone_spotlight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798C31B5718E500ACB436 /* iphone_spotlight@3x.png */; };
+		155798D91B5718E500ACB436 /* iphone_spotlight_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798C41B5718E500ACB436 /* iphone_spotlight_settings@2x.png */; };
+		155798DA1B5718E500ACB436 /* iphone_spotlight_settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798C51B5718E500ACB436 /* iphone_spotlight_settings@3x.png */; };
+		155798DD1B5718E500ACB436 /* ir_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 155798C91B5718E500ACB436 /* ir_logo.png */; };
+		159B2F6C1BC515BB00FC7F70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 159B2F6B1BC515BB00FC7F70 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		15BD34D21BC408DF00BDB063 /* app_icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BD34D11BC408DF00BDB063 /* app_icon_small.png */; settings = {ASSET_TAGS = (); }; };
+		60E7C4C98B2F4BFC80101A7D /* libPods-Voaty.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FEB4B5760F834BA49AA8EE2 /* libPods-Voaty.a */; };
+		F613A0BE63D81AEC156ED8D9 /* delete_100.png in Resources */ = {isa = PBXBuildFile; fileRef = F613A28C6816A41DE419C95D /* delete_100.png */; };
+		F613A0F3AEBBAB3AC08F78E8 /* voaty_blocked_subverses_plugin.js in Sources */ = {isa = PBXBuildFile; fileRef = F613ADB48C4F905A35C3DF40 /* voaty_blocked_subverses_plugin.js */; };
+		F613A24C0BF86E80FB2138B5 /* user_64.png in Resources */ = {isa = PBXBuildFile; fileRef = F613ACE52ACA437FE9A27C15 /* user_64.png */; };
+		F613A2AB261A72FA47DA4A44 /* voaty_subverse_list_plugin.js in Sources */ = {isa = PBXBuildFile; fileRef = F613AA5A6B590F4EBA978F0E /* voaty_subverse_list_plugin.js */; };
+		F613A2B7B74292F7E3D6E36B /* comment_32.png in Resources */ = {isa = PBXBuildFile; fileRef = F613A8FE2F5B15EE9E135014 /* comment_32.png */; };
+		F613A337628FD47365C76EBC /* voaty_user_agreement.js in Sources */ = {isa = PBXBuildFile; fileRef = F613AADC2ED86689BECE3C91 /* voaty_user_agreement.js */; };
+		F613A36F41D872E0819E1801 /* voaty_share_a_link_plugin.js in Sources */ = {isa = PBXBuildFile; fileRef = F613A2AEF83DEF8D8BF12308 /* voaty_share_a_link_plugin.js */; };
+		F613A3A5D6B2D829F716B676 /* voaty_my_account.json in Resources */ = {isa = PBXBuildFile; fileRef = F613A99044AD36D9DB37BB22 /* voaty_my_account.json */; };
+		F613A4184743CB9EE57600A0 /* url-tld.min.js in Sources */ = {isa = PBXBuildFile; fileRef = F613A5AC2FDE9EA311A7E3A2 /* url-tld.min.js */; };
+		F613A445DDD3C9F35C4144D4 /* voaty_report_plugin.js in Sources */ = {isa = PBXBuildFile; fileRef = F613A4BFE172DFB30CF6A699 /* voaty_report_plugin.js */; };
+		F613A4C8D75DEE6EA10F7315 /* voaty_submission_content.json in Resources */ = {isa = PBXBuildFile; fileRef = F613A361262A4217574DE2F0 /* voaty_submission_content.json */; };
+		F613A4F50F3965FA45605E8D /* voaty_report.json in Resources */ = {isa = PBXBuildFile; fileRef = F613A46DBD751EE86F4834CD /* voaty_report.json */; };
+		F613A531F4D2C4ADB13BBBFD /* idea_64.png in Resources */ = {isa = PBXBuildFile; fileRef = F613AC8E5D67AA93FAECDECC /* idea_64.png */; };
+		F613A58F114E12DAA2397206 /* voaty_discuss.json in Resources */ = {isa = PBXBuildFile; fileRef = F613A05DBBB9EF0F81502551 /* voaty_discuss.json */; };
+		F613A5C30470DF185F8A6522 /* user_50.png in Resources */ = {isa = PBXBuildFile; fileRef = F613AD1B7957A45867F64E39 /* user_50.png */; };
+		F613A6C8B44CD1F0402867CE /* voaty_my_account_plugin.js in Sources */ = {isa = PBXBuildFile; fileRef = F613A864FA1F3695FCBF9B81 /* voaty_my_account_plugin.js */; };
+		F613A87122C49064D6F42F5D /* my_eye_64.png in Resources */ = {isa = PBXBuildFile; fileRef = F613AB9F6BC5C80A3D5BB52A /* my_eye_64.png */; };
+		F613A8BA24218FA8F5988AD1 /* comment_64.png in Resources */ = {isa = PBXBuildFile; fileRef = F613AC82A0159CDD3553644D /* comment_64.png */; };
+		F613A8CE04CA5BF658363992 /* delete_100_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F613A614FD4393301465FACE /* delete_100_2.png */; };
+		F613A9104768BAFBDFF7043F /* voaty_subverse_list.json in Resources */ = {isa = PBXBuildFile; fileRef = F613AFEAC2D6DED73FBBBCA9 /* voaty_subverse_list.json */; };
+		F613A971AD111340BE7E36BC /* voaty_user_plugin.js in Sources */ = {isa = PBXBuildFile; fileRef = F613A8F04EFCA81362820EE1 /* voaty_user_plugin.js */; };
+		F613A9C9ED288EEA56F04E52 /* voaty_share_a_link.json in Resources */ = {isa = PBXBuildFile; fileRef = F613A207CACDFC720BC31263 /* voaty_share_a_link.json */; };
+		F613AA3D576106AA9ED2A798 /* voat-goat.png in Resources */ = {isa = PBXBuildFile; fileRef = F613A5F083E18B381B39FDD6 /* voat-goat.png */; };
+		F613AA88E194273ED6A55474 /* voaty_blocked_subverses.json in Resources */ = {isa = PBXBuildFile; fileRef = F613A97390A3625E253D4FA1 /* voaty_blocked_subverses.json */; };
+		F613AAF93064218E5F29292B /* voaty_user.json in Resources */ = {isa = PBXBuildFile; fileRef = F613AA4B3E2E6FB37CCC4FD3 /* voaty_user.json */; };
+		F613AB1814652AE3188EDC32 /* voaty_discuss_plugin.js in Sources */ = {isa = PBXBuildFile; fileRef = F613AC16A4D9041B82A9B7E4 /* voaty_discuss_plugin.js */; };
+		F613ACDCA0F55103094B637A /* uuid.js in Sources */ = {isa = PBXBuildFile; fileRef = F613A92D853227B37B23591D /* uuid.js */; };
+		F613AE4B6A48BB7A0736A090 /* voaty_submission_comment.json in Resources */ = {isa = PBXBuildFile; fileRef = F613A080CF4128CACAAE9DAE /* voaty_submission_comment.json */; };
+		F613AEBDBAD01203E6DE3576 /* voaty_submission_comment_plugin.js in Sources */ = {isa = PBXBuildFile; fileRef = F613AC9C03149CAD1FF2E2B1 /* voaty_submission_comment_plugin.js */; };
+		F613AF0AD64FEE72EFAE3CCA /* voaty_submission_content_plugin.js in Sources */ = {isa = PBXBuildFile; fileRef = F613ABD3943AB4F896739B1C /* voaty_submission_content_plugin.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1557988A1B570C5300ACB436 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 155798681B570C5300ACB436 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1557986F1B570C5300ACB436;
+			remoteInfo = Voaty;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		155798701B570C5300ACB436 /* voaty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = voaty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		155798741B570C5300ACB436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		155798751B570C5300ACB436 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		155798771B570C5300ACB436 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		155798781B570C5300ACB436 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		155798801B570C5300ACB436 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		155798891B570C5300ACB436 /* VoatyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoatyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1557988E1B570C5400ACB436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1557988F1B570C5400ACB436 /* VoatyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoatyTests.m; sourceTree = "<group>"; };
+		1557989A1B570CDC00ACB436 /* voaty_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = voaty_en.json; sourceTree = "<group>"; };
+		1557989C1B570CDC00ACB436 /* superagent.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = superagent.min.js; sourceTree = "<group>"; };
+		1557989D1B570CDC00ACB436 /* VoatyGlobalData.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = VoatyGlobalData.js; sourceTree = "<group>"; };
+		1557989E1B570CDC00ACB436 /* VoatyNetworkCommunication.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = VoatyNetworkCommunication.js; sourceTree = "<group>"; };
+		1557989F1B570CDC00ACB436 /* VoatyUtil.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = VoatyUtil.js; sourceTree = "<group>"; };
+		155798A21B570CDC00ACB436 /* voaty_submission.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = voaty_submission.json; sourceTree = "<group>"; };
+		155798A31B570CDC00ACB436 /* voaty_submission_plugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = voaty_submission_plugin.js; sourceTree = "<group>"; };
+		155798A51B570CDC00ACB436 /* voaty_subverse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = voaty_subverse.json; sourceTree = "<group>"; };
+		155798A61B570CDC00ACB436 /* voaty_subverse_plugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = voaty_subverse_plugin.js; sourceTree = "<group>"; };
+		155798A71B570CDC00ACB436 /* voaty_app.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = voaty_app.json; sourceTree = "<group>"; };
+		155798B31B5718E500ACB436 /* all_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = all_background.png; sourceTree = "<group>"; };
+		155798B41B5718E500ACB436 /* back_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_arrow@2x.png"; sourceTree = "<group>"; };
+		155798B71B5718E500ACB436 /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon.png; sourceTree = "<group>"; };
+		155798B81B5718E500ACB436 /* icon_design.afdesign */ = {isa = PBXFileReference; lastKnownFileType = file; path = icon_design.afdesign; sourceTree = "<group>"; };
+		155798BA1B5718E500ACB436 /* ipad_app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad_app.png; sourceTree = "<group>"; };
+		155798BB1B5718E500ACB436 /* ipad_app@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad_app@2x.png"; sourceTree = "<group>"; };
+		155798BC1B5718E500ACB436 /* ipad_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad_settings.png; sourceTree = "<group>"; };
+		155798BD1B5718E500ACB436 /* ipad_settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad_settings@2x.png"; sourceTree = "<group>"; };
+		155798BE1B5718E500ACB436 /* ipad_spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad_spotlight.png; sourceTree = "<group>"; };
+		155798BF1B5718E500ACB436 /* ipad_spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad_spotlight@2x.png"; sourceTree = "<group>"; };
+		155798C01B5718E500ACB436 /* iphone_app@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone_app@2x.png"; sourceTree = "<group>"; };
+		155798C11B5718E500ACB436 /* iphone_app@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone_app@3x.png"; sourceTree = "<group>"; };
+		155798C21B5718E500ACB436 /* iphone_spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone_spotlight@2x.png"; sourceTree = "<group>"; };
+		155798C31B5718E500ACB436 /* iphone_spotlight@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone_spotlight@3x.png"; sourceTree = "<group>"; };
+		155798C41B5718E500ACB436 /* iphone_spotlight_settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone_spotlight_settings@2x.png"; sourceTree = "<group>"; };
+		155798C51B5718E500ACB436 /* iphone_spotlight_settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone_spotlight_settings@3x.png"; sourceTree = "<group>"; };
+		155798C91B5718E500ACB436 /* ir_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ir_logo.png; sourceTree = "<group>"; };
+		159B2F6B1BC515BB00FC7F70 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		15BD34D11BC408DF00BDB063 /* app_icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon_small.png; sourceTree = "<group>"; };
+		3FEB4B5760F834BA49AA8EE2 /* libPods-Voaty.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voaty.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62AC6C29E2961DEC8608B83D /* Pods-Voaty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Voaty.release.xcconfig"; path = "Pods/Target Support Files/Pods-Voaty/Pods-Voaty.release.xcconfig"; sourceTree = "<group>"; };
+		CB2320DBE0CE49D45B59244A /* Pods-Voaty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Voaty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Voaty/Pods-Voaty.debug.xcconfig"; sourceTree = "<group>"; };
+		F613A05DBBB9EF0F81502551 /* voaty_discuss.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = voaty_discuss.json; sourceTree = "<group>"; };
+		F613A080CF4128CACAAE9DAE /* voaty_submission_comment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = voaty_submission_comment.json; sourceTree = "<group>"; };
+		F613A207CACDFC720BC31263 /* voaty_share_a_link.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = voaty_share_a_link.json; sourceTree = "<group>"; };
+		F613A28C6816A41DE419C95D /* delete_100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete_100.png; sourceTree = "<group>"; };
+		F613A2AEF83DEF8D8BF12308 /* voaty_share_a_link_plugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = voaty_share_a_link_plugin.js; sourceTree = "<group>"; };
+		F613A361262A4217574DE2F0 /* voaty_submission_content.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = voaty_submission_content.json; sourceTree = "<group>"; };
+		F613A46DBD751EE86F4834CD /* voaty_report.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = voaty_report.json; sourceTree = "<group>"; };
+		F613A4BFE172DFB30CF6A699 /* voaty_report_plugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = voaty_report_plugin.js; sourceTree = "<group>"; };
+		F613A5AC2FDE9EA311A7E3A2 /* url-tld.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "url-tld.min.js"; sourceTree = "<group>"; };
+		F613A5F083E18B381B39FDD6 /* voat-goat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voat-goat.png"; sourceTree = "<group>"; };
+		F613A614FD4393301465FACE /* delete_100_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete_100_2.png; sourceTree = "<group>"; };
+		F613A864FA1F3695FCBF9B81 /* voaty_my_account_plugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = voaty_my_account_plugin.js; sourceTree = "<group>"; };
+		F613A8F04EFCA81362820EE1 /* voaty_user_plugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = voaty_user_plugin.js; sourceTree = "<group>"; };
+		F613A8FE2F5B15EE9E135014 /* comment_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment_32.png; sourceTree = "<group>"; };
+		F613A92D853227B37B23591D /* uuid.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = uuid.js; sourceTree = "<group>"; };
+		F613A97390A3625E253D4FA1 /* voaty_blocked_subverses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = voaty_blocked_subverses.json; sourceTree = "<group>"; };
+		F613A99044AD36D9DB37BB22 /* voaty_my_account.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = voaty_my_account.json; sourceTree = "<group>"; };
+		F613AA4B3E2E6FB37CCC4FD3 /* voaty_user.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = voaty_user.json; sourceTree = "<group>"; };
+		F613AA5A6B590F4EBA978F0E /* voaty_subverse_list_plugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = voaty_subverse_list_plugin.js; sourceTree = "<group>"; };
+		F613AADC2ED86689BECE3C91 /* voaty_user_agreement.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = voaty_user_agreement.js; sourceTree = "<group>"; };
+		F613AB9F6BC5C80A3D5BB52A /* my_eye_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_eye_64.png; sourceTree = "<group>"; };
+		F613ABD3943AB4F896739B1C /* voaty_submission_content_plugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = voaty_submission_content_plugin.js; sourceTree = "<group>"; };
+		F613AC16A4D9041B82A9B7E4 /* voaty_discuss_plugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = voaty_discuss_plugin.js; sourceTree = "<group>"; };
+		F613AC82A0159CDD3553644D /* comment_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment_64.png; sourceTree = "<group>"; };
+		F613AC8E5D67AA93FAECDECC /* idea_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = idea_64.png; sourceTree = "<group>"; };
+		F613AC9C03149CAD1FF2E2B1 /* voaty_submission_comment_plugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = voaty_submission_comment_plugin.js; sourceTree = "<group>"; };
+		F613ACE52ACA437FE9A27C15 /* user_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_64.png; sourceTree = "<group>"; };
+		F613AD1B7957A45867F64E39 /* user_50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_50.png; sourceTree = "<group>"; };
+		F613ADB48C4F905A35C3DF40 /* voaty_blocked_subverses_plugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = voaty_blocked_subverses_plugin.js; sourceTree = "<group>"; };
+		F613AFEAC2D6DED73FBBBCA9 /* voaty_subverse_list.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = voaty_subverse_list.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1557986D1B570C5300ACB436 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60E7C4C98B2F4BFC80101A7D /* libPods-Voaty.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		155798861B570C5300ACB436 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		155798671B570C5300ACB436 = {
+			isa = PBXGroup;
+			children = (
+				155798721B570C5300ACB436 /* Voaty */,
+				1557988C1B570C5300ACB436 /* VoatyTests */,
+				155798711B570C5300ACB436 /* Products */,
+				DC73E3576E83074F44D57832 /* Pods */,
+				2D729FD1A09CC3047FAE2950 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		155798711B570C5300ACB436 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				155798701B570C5300ACB436 /* voaty.app */,
+				155798891B570C5300ACB436 /* VoatyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		155798721B570C5300ACB436 /* Voaty */ = {
+			isa = PBXGroup;
+			children = (
+				155798771B570C5300ACB436 /* AppDelegate.h */,
+				155798781B570C5300ACB436 /* AppDelegate.m */,
+				155798991B570CDC00ACB436 /* I18N */,
+				1557989B1B570CDC00ACB436 /* JSLibraries */,
+				155798A01B570CDC00ACB436 /* Screens */,
+				155798B21B5718E500ACB436 /* Images */,
+				155798A71B570CDC00ACB436 /* voaty_app.json */,
+				155798801B570C5300ACB436 /* Images.xcassets */,
+				159B2F6B1BC515BB00FC7F70 /* LaunchScreen.storyboard */,
+				155798731B570C5300ACB436 /* Supporting Files */,
+				F613AA7ECF10FFCD42DE58CE /* 3rdParty */,
+			);
+			path = Voaty;
+			sourceTree = "<group>";
+		};
+		155798731B570C5300ACB436 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				155798741B570C5300ACB436 /* Info.plist */,
+				155798751B570C5300ACB436 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1557988C1B570C5300ACB436 /* VoatyTests */ = {
+			isa = PBXGroup;
+			children = (
+				1557988F1B570C5400ACB436 /* VoatyTests.m */,
+				1557988D1B570C5400ACB436 /* Supporting Files */,
+			);
+			path = VoatyTests;
+			sourceTree = "<group>";
+		};
+		1557988D1B570C5400ACB436 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1557988E1B570C5400ACB436 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		155798991B570CDC00ACB436 /* I18N */ = {
+			isa = PBXGroup;
+			children = (
+				1557989A1B570CDC00ACB436 /* voaty_en.json */,
+			);
+			path = I18N;
+			sourceTree = "<group>";
+		};
+		1557989B1B570CDC00ACB436 /* JSLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				1557989C1B570CDC00ACB436 /* superagent.min.js */,
+				1557989D1B570CDC00ACB436 /* VoatyGlobalData.js */,
+				1557989E1B570CDC00ACB436 /* VoatyNetworkCommunication.js */,
+				1557989F1B570CDC00ACB436 /* VoatyUtil.js */,
+				F613A92D853227B37B23591D /* uuid.js */,
+				F613A5AC2FDE9EA311A7E3A2 /* url-tld.min.js */,
+			);
+			path = JSLibraries;
+			sourceTree = "<group>";
+		};
+		155798A01B570CDC00ACB436 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				155798A11B570CDC00ACB436 /* Submission */,
+				155798A41B570CDC00ACB436 /* Subverse */,
+				F613A3D6BDA9ADB1D6D0096E /* User */,
+				F613A4862DD0121D0C6EA819 /* MyAccount */,
+				F613AF4EA2E8D6B5F2A8F57E /* Report */,
+				F613A1FAC157C5F9AA5C16D7 /* BlockedSubverses */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		155798A11B570CDC00ACB436 /* Submission */ = {
+			isa = PBXGroup;
+			children = (
+				155798A21B570CDC00ACB436 /* voaty_submission.json */,
+				155798A31B570CDC00ACB436 /* voaty_submission_plugin.js */,
+				F613AFC6428ED43F5612C8D2 /* SubmissionContent */,
+				F613A15B9BE9A5E22F4BB210 /* NewSubmission */,
+				F613A194DE7FA91FB9965004 /* Comment */,
+			);
+			path = Submission;
+			sourceTree = "<group>";
+		};
+		155798A41B570CDC00ACB436 /* Subverse */ = {
+			isa = PBXGroup;
+			children = (
+				155798A51B570CDC00ACB436 /* voaty_subverse.json */,
+				155798A61B570CDC00ACB436 /* voaty_subverse_plugin.js */,
+				F613A4C0FAD4C672B41B4AE0 /* SubversesList */,
+				F613AADC2ED86689BECE3C91 /* voaty_user_agreement.js */,
+			);
+			path = Subverse;
+			sourceTree = "<group>";
+		};
+		155798B21B5718E500ACB436 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				155798B31B5718E500ACB436 /* all_background.png */,
+				155798B41B5718E500ACB436 /* back_arrow@2x.png */,
+				155798B51B5718E500ACB436 /* Icons */,
+				155798C91B5718E500ACB436 /* ir_logo.png */,
+				F613A5F083E18B381B39FDD6 /* voat-goat.png */,
+				F613AC82A0159CDD3553644D /* comment_64.png */,
+				F613AB9F6BC5C80A3D5BB52A /* my_eye_64.png */,
+				F613A8FE2F5B15EE9E135014 /* comment_32.png */,
+				F613ACE52ACA437FE9A27C15 /* user_64.png */,
+				F613AD1B7957A45867F64E39 /* user_50.png */,
+				F613AC8E5D67AA93FAECDECC /* idea_64.png */,
+				F613A28C6816A41DE419C95D /* delete_100.png */,
+				F613A614FD4393301465FACE /* delete_100_2.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		155798B51B5718E500ACB436 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				155798B61B5718E500ACB436 /* design */,
+				155798BA1B5718E500ACB436 /* ipad_app.png */,
+				155798BB1B5718E500ACB436 /* ipad_app@2x.png */,
+				155798BC1B5718E500ACB436 /* ipad_settings.png */,
+				155798BD1B5718E500ACB436 /* ipad_settings@2x.png */,
+				155798BE1B5718E500ACB436 /* ipad_spotlight.png */,
+				155798BF1B5718E500ACB436 /* ipad_spotlight@2x.png */,
+				155798C01B5718E500ACB436 /* iphone_app@2x.png */,
+				155798C11B5718E500ACB436 /* iphone_app@3x.png */,
+				155798C21B5718E500ACB436 /* iphone_spotlight@2x.png */,
+				155798C31B5718E500ACB436 /* iphone_spotlight@3x.png */,
+				155798C41B5718E500ACB436 /* iphone_spotlight_settings@2x.png */,
+				155798C51B5718E500ACB436 /* iphone_spotlight_settings@3x.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		155798B61B5718E500ACB436 /* design */ = {
+			isa = PBXGroup;
+			children = (
+				15BD34D11BC408DF00BDB063 /* app_icon_small.png */,
+				155798B71B5718E500ACB436 /* app_icon.png */,
+				155798B81B5718E500ACB436 /* icon_design.afdesign */,
+			);
+			path = design;
+			sourceTree = "<group>";
+		};
+		2D729FD1A09CC3047FAE2950 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FEB4B5760F834BA49AA8EE2 /* libPods-Voaty.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC73E3576E83074F44D57832 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB2320DBE0CE49D45B59244A /* Pods-Voaty.debug.xcconfig */,
+				62AC6C29E2961DEC8608B83D /* Pods-Voaty.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F613A15B9BE9A5E22F4BB210 /* NewSubmission */ = {
+			isa = PBXGroup;
+			children = (
+				F613A207CACDFC720BC31263 /* voaty_share_a_link.json */,
+				F613A2AEF83DEF8D8BF12308 /* voaty_share_a_link_plugin.js */,
+				F613AC16A4D9041B82A9B7E4 /* voaty_discuss_plugin.js */,
+				F613A05DBBB9EF0F81502551 /* voaty_discuss.json */,
+			);
+			path = NewSubmission;
+			sourceTree = "<group>";
+		};
+		F613A194DE7FA91FB9965004 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				F613A080CF4128CACAAE9DAE /* voaty_submission_comment.json */,
+				F613AC9C03149CAD1FF2E2B1 /* voaty_submission_comment_plugin.js */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		F613A1FAC157C5F9AA5C16D7 /* BlockedSubverses */ = {
+			isa = PBXGroup;
+			children = (
+				F613A97390A3625E253D4FA1 /* voaty_blocked_subverses.json */,
+				F613ADB48C4F905A35C3DF40 /* voaty_blocked_subverses_plugin.js */,
+			);
+			path = BlockedSubverses;
+			sourceTree = "<group>";
+		};
+		F613A3D6BDA9ADB1D6D0096E /* User */ = {
+			isa = PBXGroup;
+			children = (
+				F613AA4B3E2E6FB37CCC4FD3 /* voaty_user.json */,
+				F613A8F04EFCA81362820EE1 /* voaty_user_plugin.js */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		F613A4862DD0121D0C6EA819 /* MyAccount */ = {
+			isa = PBXGroup;
+			children = (
+				F613A99044AD36D9DB37BB22 /* voaty_my_account.json */,
+				F613A864FA1F3695FCBF9B81 /* voaty_my_account_plugin.js */,
+			);
+			path = MyAccount;
+			sourceTree = "<group>";
+		};
+		F613A4C0FAD4C672B41B4AE0 /* SubversesList */ = {
+			isa = PBXGroup;
+			children = (
+				F613AFEAC2D6DED73FBBBCA9 /* voaty_subverse_list.json */,
+				F613AA5A6B590F4EBA978F0E /* voaty_subverse_list_plugin.js */,
+			);
+			path = SubversesList;
+			sourceTree = "<group>";
+		};
+		F613AA7ECF10FFCD42DE58CE /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 3rdParty;
+			sourceTree = "<group>";
+		};
+		F613AF4EA2E8D6B5F2A8F57E /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				F613A46DBD751EE86F4834CD /* voaty_report.json */,
+				F613A4BFE172DFB30CF6A699 /* voaty_report_plugin.js */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		F613AFC6428ED43F5612C8D2 /* SubmissionContent */ = {
+			isa = PBXGroup;
+			children = (
+				F613ABD3943AB4F896739B1C /* voaty_submission_content_plugin.js */,
+				F613A361262A4217574DE2F0 /* voaty_submission_content.json */,
+			);
+			path = SubmissionContent;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1557986F1B570C5300ACB436 /* Voaty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 155798931B570C5400ACB436 /* Build configuration list for PBXNativeTarget "Voaty" */;
+			buildPhases = (
+				150A97DD1B6CFF390016C5EB /* ShellScript */,
+				152FA8841BAAB9F300C7BA2A /* ShellScript */,
+				156362C31B5D498E00FF865D /* Copy all JS files into built app */,
+				2C51F7E9439F5CA3B3C9D48C /* Check Pods Manifest.lock */,
+				1557986C1B570C5300ACB436 /* Sources */,
+				1557986D1B570C5300ACB436 /* Frameworks */,
+				1557986E1B570C5300ACB436 /* Resources */,
+				CD284B0F9AA0B9993CF1E7AC /* Copy Pods Resources */,
+				150642AA1B78D9FB00B671E9 /* HockeyApp */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Voaty;
+			productName = Voaty;
+			productReference = 155798701B570C5300ACB436 /* voaty.app */;
+			productType = "com.apple.product-type.application";
+		};
+		155798881B570C5300ACB436 /* VoatyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 155798961B570C5400ACB436 /* Build configuration list for PBXNativeTarget "VoatyTests" */;
+			buildPhases = (
+				155798851B570C5300ACB436 /* Sources */,
+				155798861B570C5300ACB436 /* Frameworks */,
+				155798871B570C5300ACB436 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1557988B1B570C5300ACB436 /* PBXTargetDependency */,
+			);
+			name = VoatyTests;
+			productName = VoatyTests;
+			productReference = 155798891B570C5300ACB436 /* VoatyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		155798681B570C5300ACB436 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = infrared.io;
+				TargetAttributes = {
+					1557986F1B570C5300ACB436 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					155798881B570C5300ACB436 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 1557986F1B570C5300ACB436;
+					};
+				};
+			};
+			buildConfigurationList = 1557986B1B570C5300ACB436 /* Build configuration list for PBXProject "Voaty" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 155798671B570C5300ACB436;
+			productRefGroup = 155798711B570C5300ACB436 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1557986F1B570C5300ACB436 /* Voaty */,
+				155798881B570C5300ACB436 /* VoatyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1557986E1B570C5300ACB436 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155798D51B5718E500ACB436 /* iphone_app@2x.png in Resources */,
+				155798DA1B5718E500ACB436 /* iphone_spotlight_settings@3x.png in Resources */,
+				155798CC1B5718E500ACB436 /* app_icon.png in Resources */,
+				155798D61B5718E500ACB436 /* iphone_app@3x.png in Resources */,
+				155798DD1B5718E500ACB436 /* ir_logo.png in Resources */,
+				155798CF1B5718E500ACB436 /* ipad_app.png in Resources */,
+				155798CD1B5718E500ACB436 /* icon_design.afdesign in Resources */,
+				155798D91B5718E500ACB436 /* iphone_spotlight_settings@2x.png in Resources */,
+				155798AF1B570CDC00ACB436 /* voaty_subverse.json in Resources */,
+				155798D81B5718E500ACB436 /* iphone_spotlight@3x.png in Resources */,
+				155798D41B5718E500ACB436 /* ipad_spotlight@2x.png in Resources */,
+				155798CB1B5718E500ACB436 /* back_arrow@2x.png in Resources */,
+				155798D01B5718E500ACB436 /* ipad_app@2x.png in Resources */,
+				155798CA1B5718E500ACB436 /* all_background.png in Resources */,
+				155798A81B570CDC00ACB436 /* voaty_en.json in Resources */,
+				159B2F6C1BC515BB00FC7F70 /* LaunchScreen.storyboard in Resources */,
+				155798AD1B570CDC00ACB436 /* voaty_submission.json in Resources */,
+				155798D71B5718E500ACB436 /* iphone_spotlight@2x.png in Resources */,
+				155798D21B5718E500ACB436 /* ipad_settings@2x.png in Resources */,
+				155798811B570C5300ACB436 /* Images.xcassets in Resources */,
+				155798D11B5718E500ACB436 /* ipad_settings.png in Resources */,
+				155798D31B5718E500ACB436 /* ipad_spotlight.png in Resources */,
+				155798B11B570CDC00ACB436 /* voaty_app.json in Resources */,
+				F613A4C8D75DEE6EA10F7315 /* voaty_submission_content.json in Resources */,
+				F613A9104768BAFBDFF7043F /* voaty_subverse_list.json in Resources */,
+				F613AAF93064218E5F29292B /* voaty_user.json in Resources */,
+				F613A3A5D6B2D829F716B676 /* voaty_my_account.json in Resources */,
+				F613AA3D576106AA9ED2A798 /* voat-goat.png in Resources */,
+				F613A8BA24218FA8F5988AD1 /* comment_64.png in Resources */,
+				F613A87122C49064D6F42F5D /* my_eye_64.png in Resources */,
+				F613A2B7B74292F7E3D6E36B /* comment_32.png in Resources */,
+				F613A24C0BF86E80FB2138B5 /* user_64.png in Resources */,
+				F613A5C30470DF185F8A6522 /* user_50.png in Resources */,
+				F613A9C9ED288EEA56F04E52 /* voaty_share_a_link.json in Resources */,
+				F613A58F114E12DAA2397206 /* voaty_discuss.json in Resources */,
+				F613AE4B6A48BB7A0736A090 /* voaty_submission_comment.json in Resources */,
+				F613A531F4D2C4ADB13BBBFD /* idea_64.png in Resources */,
+				F613A4F50F3965FA45605E8D /* voaty_report.json in Resources */,
+				F613AA88E194273ED6A55474 /* voaty_blocked_subverses.json in Resources */,
+				F613A0BE63D81AEC156ED8D9 /* delete_100.png in Resources */,
+				15BD34D21BC408DF00BDB063 /* app_icon_small.png in Resources */,
+				F613A8CE04CA5BF658363992 /* delete_100_2.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		155798871B570C5300ACB436 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		150642AA1B78D9FB00B671E9 /* HockeyApp */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = HockeyApp;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE=\"${SRCROOT}/HockeySDK-iOS/BuildAgent\"\nif [ -f \"$FILE\" ]; then\n\"$FILE\"\nfi";
+		};
+		150A97DD1B6CFF390016C5EB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n\nbuildPlist=\"Voaty/Info.plist\"\n\nif [ \"${CONFIGURATION}\" = \"Debug\" ];\nthen\n# Get the existing buildVersion and buildNumber values from the buildPlist\nbundleShortVersion=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" $buildPlist)\ngitVersionNumber=`git rev-parse --short HEAD`\n\nbuildDate=$(date \"+%Y%m%d.%H%M%S\")\n\n# Increment the buildNumber\n#bundleShortVersion=$(($bundleShortVersion + 1))\n\n# Set the version numbers in the buildPlist\n#/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $bundleShortVersion\" $buildPlist\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $gitVersionNumber.$buildDate\" $buildPlist\nelse\n# date+time without separator\nbuildDate=$(date \"+%Y%m%d%H%M%S\")\n\n# Set the version numbers in the buildPlist\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildDate\" $buildPlist\nfi";
+		};
+		152FA8841BAAB9F300C7BA2A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n\nif hash jq 2>/dev/null; then\n\n    app_json_path=\"Voaty/voaty_app.json\"\n    #app_json_path=\"/Users/urosmil/Documents/AppConveyor/Voaty/Voaty/app.json\"\n\n    jsonStr=`cat $app_json_path`\n    #jsonStr='{ \"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\" }'\n\n    buildDate=$(date \"+%Y%m%d%H%M%S\")\n\n    jsonStr=$(jq 'del(.version)' <<<\"$jsonStr\")\n    jsonStr=$(jq --arg buildDate $buildDate '. + { \"version\": $buildDate  | tonumber }' <<<\"$jsonStr\")\n\n    echo $jsonStr > $app_json_path\n\n    #jq '.' <<<\"$jsonStr\" | tee app.json\n    jq '.' <<<\"$jsonStr\" | tee $app_json_path\n\nelse\n\n    echo \"Script requires 'jq' but it's not installed.  Skipping.\";\n\nfi\n";
+		};
+		156362C31B5D498E00FF865D /* Copy all JS files into built app */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy all JS files into built app";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "find ${PROJECT_DIR}/ -name \"*.js\" -type f  -exec cp  {} ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app \\;";
+		};
+		2C51F7E9439F5CA3B3C9D48C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CD284B0F9AA0B9993CF1E7AC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Voaty/Pods-Voaty-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1557986C1B570C5300ACB436 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155798791B570C5300ACB436 /* AppDelegate.m in Sources */,
+				155798761B570C5300ACB436 /* main.m in Sources */,
+				F613AF0AD64FEE72EFAE3CCA /* voaty_submission_content_plugin.js in Sources */,
+				F613A2AB261A72FA47DA4A44 /* voaty_subverse_list_plugin.js in Sources */,
+				F613ACDCA0F55103094B637A /* uuid.js in Sources */,
+				F613A6C8B44CD1F0402867CE /* voaty_my_account_plugin.js in Sources */,
+				F613A971AD111340BE7E36BC /* voaty_user_plugin.js in Sources */,
+				F613A4184743CB9EE57600A0 /* url-tld.min.js in Sources */,
+				F613A36F41D872E0819E1801 /* voaty_share_a_link_plugin.js in Sources */,
+				F613AB1814652AE3188EDC32 /* voaty_discuss_plugin.js in Sources */,
+				F613AEBDBAD01203E6DE3576 /* voaty_submission_comment_plugin.js in Sources */,
+				F613A337628FD47365C76EBC /* voaty_user_agreement.js in Sources */,
+				F613A445DDD3C9F35C4144D4 /* voaty_report_plugin.js in Sources */,
+				F613A0F3AEBBAB3AC08F78E8 /* voaty_blocked_subverses_plugin.js in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		155798851B570C5300ACB436 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155798901B570C5400ACB436 /* VoatyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1557988B1B570C5300ACB436 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1557986F1B570C5300ACB436 /* Voaty */;
+			targetProxy = 1557988A1B570C5300ACB436 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		155798911B570C5400ACB436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Uros Milivojevic";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "bb01bb80-d7b4-4931-b874-c5047676bb43";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		155798921B570C5400ACB436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Uros Milivojevic";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "bb01bb80-d7b4-4931-b874-c5047676bb43";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		155798941B570C5400ACB436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB2320DBE0CE49D45B59244A /* Pods-Voaty.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Voaty/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = voaty;
+				PROVISIONING_PROFILE = "68cc2988-03ed-40d6-b4c0-f33cd63a5665";
+			};
+			name = Debug;
+		};
+		155798951B570C5400ACB436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62AC6C29E2961DEC8608B83D /* Pods-Voaty.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Voaty/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = voaty;
+				PROVISIONING_PROFILE = "68cc2988-03ed-40d6-b4c0-f33cd63a5665";
+			};
+			name = Release;
+		};
+		155798971B570C5400ACB436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VoatyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Voaty.app/Voaty";
+			};
+			name = Debug;
+		};
+		155798981B570C5400ACB436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VoatyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Voaty.app/Voaty";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1557986B1B570C5300ACB436 /* Build configuration list for PBXProject "Voaty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				155798911B570C5400ACB436 /* Debug */,
+				155798921B570C5400ACB436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		155798931B570C5400ACB436 /* Build configuration list for PBXNativeTarget "Voaty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				155798941B570C5400ACB436 /* Debug */,
+				155798951B570C5400ACB436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		155798961B570C5400ACB436 /* Build configuration list for PBXNativeTarget "VoatyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				155798971B570C5400ACB436 /* Debug */,
+				155798981B570C5400ACB436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 155798681B570C5300ACB436 /* Project object */;
+}

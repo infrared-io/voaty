@@ -1,0 +1,190 @@
+{
+  "id": "voaty_report",
+  "controller": {
+    "supportedInterfaceOrientations": "UIInterfaceOrientationPortrait | UIInterfaceOrientationPortraitUpsideDown",
+    "title": "Report",
+    "preferredStatusBarStyle": "UIStatusBarStyleLightContent",
+    "navigationController": {
+      "autoAddIfNeeded": true,
+      "hideNavigationBar": false,
+      "navigationBarTranslucent": true,
+      "navigationBarTintColor": "#ffffff00",
+      "navigationTintColor": "#ffffff",
+      "navigationTitleColor": "#ffffff",
+      "navigationTitleFont": "HelveticaNeue-Light, 22",
+      "backIndicatorImage": "back_arrow@2x.png",
+      "backIndicatorNoText": true,
+      "rightBarButtonItem": {
+        "id": "right_bar_button",
+        "type": "barButtonItem",
+        "style": "UIBarButtonItemStyleBordered",
+        "title": "Submit",
+        "actions": "this.submitReport();"
+      }
+    },
+    "keyboardManager": {
+      "enable": true,
+      "enableAutoToolbar": false
+    }
+  },
+  "view": {
+    "id": "whole_ui",
+    "type": "view",
+    "backgroundColor": "#404040",
+    "subviews": [
+      {
+        "id": "content_wrapper",
+        "type": "view",
+        "subviews": [
+          {
+            "id": "screen_background",
+            "type": "imageView",
+            "image": "all_background.png"
+          },
+          {
+            "id": "header_background",
+            "type": "view"
+          },
+          {
+            "id" : "share_a_link_scroll_view",
+            "type" : "scrollView",
+            "backgroundColor_": "#ff000080",
+            "subviews": [
+              {
+                "id": "internal_view",
+                "type": "view",
+                "backgroundColor_": "#00ff0080",
+                "subviews": [
+                  {
+                    "id": "title_label",
+                    "type": "label",
+                    "text": "Title",
+                    "font": "HelveticaNeue-Light, 16",
+                    "textColor": "#c0c0c0"
+                  },
+                  {
+                    "id": "title_value",
+                    "type": "label",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "font": "HelveticaNeue-Light, 16",
+                    "numberOfLines": 0,
+                    "lineBreakMode": "NSLineBreakByTruncatingTail",
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "data": "this.reportTitle"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "message_label",
+                    "type": "label",
+                    "text": "Reason for reporting",
+                    "font": "HelveticaNeue-Light, 16",
+                    "textColor": "#c0c0c0",
+                    "gestureRecognizers": [
+                      {
+                        "id" : "tapGROnMessageLabel",
+                        "gestureType" : "tap",
+                        "numberOfTapsRequired" : 1,
+                        "numberOfTouchesRequired" : 1,
+                        "gestureActions" : "this.putFocusOnMessage();"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "message_tv",
+                    "type": "textView",
+                    "backgroundColor": "#ff000000",
+                    "textColor": "#ffffff",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "font": "HelveticaNeue-Light, 16",
+                    "borderWidth": "0.5",
+                    "borderColor": "#ffffffaa",
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "mode": "twoWay",
+                        "data": "this.reportMessage"
+                      }
+                    ]
+                  }
+                ],
+                "constraints": [
+                  {
+                    "visualFormat": "H:|-16-[title_label]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[title_value]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[message_label]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[message_tv]-16-|"
+                  },
+                  {
+                    "visualFormat": "V:|-8-[title_label(==20)]-8-[title_value]-20-[message_label(==20)]-8-[message_tv(==200)]-24-|"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "visualFormat": "H:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[header_background]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[share_a_link_scroll_view]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[header_background(==64)]-0-[share_a_link_scroll_view]"
+          },
+          {
+            "withItem": "internal_view",
+            "withItemAttribute": "NSLayoutAttributeLeading",
+            "relatedBy": "NSLayoutRelationEqual",
+            "toItem": "content_wrapper",
+            "toItemAttribute": "NSLayoutAttributeLeading",
+            "multiplier": "1",
+            "constant": "0"
+          },
+          {
+            "withItem": "internal_view",
+            "withItemAttribute": "NSLayoutAttributeTrailing",
+            "relatedBy": "NSLayoutRelationEqual",
+            "toItem": "content_wrapper",
+            "toItemAttribute": "NSLayoutAttributeTrailing",
+            "multiplier": "1",
+            "constant": "0"
+          },
+          {
+            "withItem": "share_a_link_scroll_view",
+            "withItemAttribute": "NSLayoutAttributeHeight",
+            "relatedBy": "NSLayoutRelationEqual",
+            "toItem": "internal_view",
+            "toItemAttribute": "NSLayoutAttributeHeight",
+            "multiplier": "1",
+            "constant": "0"
+          }
+        ]
+      }
+    ],
+    "constraints": [
+      {
+        "visualFormat": "H:|-0-[content_wrapper]-0-|"
+      },
+      {
+        "visualFormat": "V:|-(-64)-[content_wrapper]-0-|"
+      }
+    ]
+  }
+}

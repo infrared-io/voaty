@@ -1,0 +1,59 @@
+{
+  "id": "voaty",
+  "screens": [
+    {
+      "deviceType": "phone",
+      "path": "voaty_subverse.json"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_subverse_list.json"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_submission.json"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_submission_content.json"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_submission_comment.json"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_share_a_link.json"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_discuss.json"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_user.json"
+    },
+    {
+      "deviceType": "phone",
+      "path": "voaty_my_account.json"
+    }
+  ],
+  "jsLibraries": [
+    "VoatyUtil.js",
+    "VoatyGlobalData.js",
+    "VoatyNetworkCommunication.js",
+    "superagent.min.js",
+    "uuid.js",
+    "url-tld.min.js",
+    "http://www.google-analytics.com/analytics.js"
+  ],
+  "mainScreenId": "voaty_subverse",
+  "i18n": {
+    "default": "en",
+    "languages": {
+      "en": "voaty_en.json"
+    }
+  },
+  "silentUpdate": true,
+  "version": 20150917132452
+}

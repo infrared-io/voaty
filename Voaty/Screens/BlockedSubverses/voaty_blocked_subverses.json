@@ -1,0 +1,288 @@
+{
+  "id": "voaty_blocked_subverses",
+  "controller": {
+    "supportedInterfaceOrientations": "UIInterfaceOrientationPortrait | UIInterfaceOrientationPortraitUpsideDown",
+    "title": "Blocked",
+    "preferredStatusBarStyle": "UIStatusBarStyleLightContent",
+    "navigationController": {
+      "autoAddIfNeeded": true,
+      "hideNavigationBar": false,
+      "navigationBarTranslucent": true,
+      "navigationBarTintColor": "#ffffff00",
+      "navigationTintColor": "#ffffff",
+      "navigationTitleColor": "#ffffff",
+      "navigationTitleFont": "HelveticaNeue-Light, 22",
+      "backIndicatorImage": "back_arrow@2x.png",
+      "backIndicatorNoText": true,
+      "rightBarButtonItem": {
+        "id": "right_bar_button",
+        "type": "barButtonItem",
+        "style": "UIBarButtonItemStyleBordered",
+        "identifier": "UIBarButtonSystemItemAdd",
+        "actions": "this.showAddBlockedSubverseHolder();"
+      }
+    },
+    "keyboardManager": {
+      "enable": false,
+      "enableAutoToolbar": false
+    }
+  },
+  "view": {
+    "id": "whole_ui",
+    "type": "view",
+    "backgroundColor": "#404040",
+    "subviews": [
+      {
+        "id": "content_wrapper",
+        "type": "view",
+        "subviews": [
+          {
+            "id": "screen_background",
+            "type": "imageView",
+            "image": "all_background.png"
+          },
+          {
+            "id": "header_background",
+            "type": "view"
+          },
+          {
+            "id" : "blocked_subverses_table_view",
+            "type": "tableView",
+            "rowHeight": 44,
+            "alwaysBounceVertical": true,
+            "separatorStyle": "UITableViewCellSeparatorStyleNone",
+            "autoLayoutKeyboardHandling": true,
+            "dataBinding": [
+              {
+                "property": "tableData",
+                "data": "this.tableData"
+              }
+            ],
+            "cells": [
+              {
+                "id": "table_cell",
+                "type": "tableViewCell",
+                "selectionStyle": "UITableViewCellSelectionStyleNone",
+                "subviews": [
+                  {
+                    "id": "titleLabel",
+                    "type": "label",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "backgroundColor": "#ff000000",
+                    "font": "HelveticaNeue-Light, 18",
+                    "numberOfLines": 0,
+                    "lineBreakMode": "NSLineBreakByTruncatingTail",
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "data": "cell.title"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 1000,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisVertical"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "deleteButton",
+                    "type": "button",
+                    "normalImage": "delete_100_2.png",
+                    "touchUpInsideActions": "this.unblockedSubverse(data);"
+                  },
+                  {
+                    "id": "bottom_cell_separator",
+                    "type": "view",
+                    "backgroundColor": "#a0a0a0"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "visualFormat": "H:|-16-[titleLabel]-0-[deleteButton(==40)]-5-|"
+                  },
+                  {
+                    "visualFormat": "V:|-0-[titleLabel]-0-[bottom_cell_separator(==0.5)]-0-|"
+                  },
+                  {
+                    "visualFormat": "V:|-2-[deleteButton]-2-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[bottom_cell_separator]-0-|"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "addBlockedSubverseHolder",
+            "type": "view",
+            "hidden": "true",
+            "autoLayoutKeyboardHandling": true,
+            "subviews": [
+              {
+                "id": "addBlockedSubverseBackground",
+                "type": "view",
+                "gestureRecognizers": [
+                  {
+                    "id": "tap_to_close",
+                    "gestureType": "tap",
+                    "numberOfTapsRequired": 1,
+                    "numberOfTouchesRequired": 1,
+                    "gestureActions": "this.cancelAddingBlockedSubverse();"
+                  }
+                ]
+              },
+              {
+                "id": "addBlockedSubverseComponents",
+                "type": "view",
+                "backgroundColor": "#2a2a2af0",
+                "userInteractionEnabled" : true,
+                "subviews": [
+                  {
+                    "id": "header_separator_line",
+                    "type": "view",
+                    "backgroundColor": "#ffffffaa"
+                  },
+                  {
+                    "id": "addBlockedSubverseLabel",
+                    "type": "label",
+                    "text": "Subverse Name",
+                    "font": "HelveticaNeue-Light, 16",
+                    "textColor": "#c0c0c0",
+                    "gestureRecognizers": [
+                      {
+                        "id" : "tapGROnUrlLabel",
+                        "gestureType" : "tap",
+                        "numberOfTapsRequired" : 1,
+                        "numberOfTouchesRequired" : 1,
+                        "gestureActions" : "this.putFocusOnName();"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "addBlockedSubverseTextField",
+                    "type": "textField",
+                    "textColor": "#ffffff",
+                    "font": "HelveticaNeue-Light, 16",
+                    "returnKeyType": "UIReturnKeyDone",
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "mode": "twoWay",
+                        "data": "this.newSubverseName"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subverse_separator_line",
+                    "type": "view",
+                    "backgroundColor": "#ffffffaa"
+                  },
+                  {
+                    "id": "cancelAddingBlockedSubverseButton",
+                    "type": "button",
+                    "normalTitle": "Cancel",
+                    "normalTitleColor": "#ffffff",
+                    "cornerRadius" : 17,
+                    "borderColor" : "#a0a0a0",
+                    "borderWidth" : 1,
+                    "font": "HelveticaNeue-Light, 16",
+                    "touchUpInsideActions": "this.cancelAddingBlockedSubverse();"
+                  },
+                  {
+                    "id": "addBlockedSubverseButton",
+                    "type": "button",
+                    "normalTitle": "Block",
+                    "normalTitleColor": "#ffffff",
+                    "cornerRadius" : 17,
+                    "borderColor" : "#a0a0a0",
+                    "borderWidth" : 1,
+                    "font": "HelveticaNeue, 16",
+                    "touchUpInsideActions": "this.addBlockedSubverse();"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "visualFormat": "H:|-0-[header_separator_line]-0-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[addBlockedSubverseLabel]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[addBlockedSubverseTextField]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[subverse_separator_line]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-24-[cancelAddingBlockedSubverseButton]-24-[addBlockedSubverseButton]-24-|"
+                  },
+                  {
+                    "visualFormat": "V:|-2-[header_separator_line(==2)]-8-[addBlockedSubverseLabel(==20)]-4-[addBlockedSubverseTextField(==30)]-0-[subverse_separator_line(==0.5)]-12-[cancelAddingBlockedSubverseButton(==32)]-16-|"
+                  },
+                  {
+                    "visualFormat": "V:[addBlockedSubverseButton(==32)]-16-|"
+                  },
+                  {
+                    "withItem": "cancelAddingBlockedSubverseButton",
+                    "withItemAttribute": "NSLayoutAttributeWidth",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "addBlockedSubverseButton",
+                    "toItemAttribute": "NSLayoutAttributeWidth",
+                    "multiplier": "1",
+                    "constant": ""
+                  }
+                ]
+              }
+            ],
+            "constraints": [
+              {
+                "visualFormat": "H:|-0-[addBlockedSubverseBackground]-0-|"
+              },
+              {
+                "visualFormat": "H:|-0-[addBlockedSubverseComponents]-0-|"
+              },
+              {
+                "visualFormat": "V:|-0-[addBlockedSubverseBackground]-0-[addBlockedSubverseComponents]-0-|"
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "visualFormat": "H:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[header_background]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[blocked_subverses_table_view]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[header_background(==64)]-0-[blocked_subverses_table_view]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[addBlockedSubverseHolder]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[addBlockedSubverseHolder]-0-|"
+          }
+        ]
+      }
+    ],
+    "constraints": [
+      {
+        "visualFormat": "H:|-0-[content_wrapper]-0-|"
+      },
+      {
+        "visualFormat": "V:|-(-64)-[content_wrapper]-0-|"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "CE34FD42A1A490347D858F77371BCFA64DEAECB2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CE34FD42A1A490347D858F77371BCFA64DEAECB2" : 0,
+    "BFB5BC4C47CFD64D58C73054FACAB30FFB1AB753" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "945D3557-FB2F-40A8-865E-52C67220D0E9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CE34FD42A1A490347D858F77371BCFA64DEAECB2" : "Voaty",
+    "BFB5BC4C47CFD64D58C73054FACAB30FFB1AB753" : "Infrared\/infrared_ios"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Voaty",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Voaty.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/infrared-io\/infrared_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BFB5BC4C47CFD64D58C73054FACAB30FFB1AB753"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/infraredio\/voaty.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CE34FD42A1A490347D858F77371BCFA64DEAECB2"
+    }
+  ]
+}

@@ -1,0 +1,325 @@
+{
+  "id": "voaty_share_a_link",
+  "controller": {
+    "supportedInterfaceOrientations": "UIInterfaceOrientationPortrait | UIInterfaceOrientationPortraitUpsideDown",
+    "title": "Share a link",
+    "preferredStatusBarStyle": "UIStatusBarStyleLightContent",
+    "navigationController": {
+      "autoAddIfNeeded": true,
+      "hideNavigationBar": false,
+      "navigationBarTranslucent": true,
+      "navigationBarTintColor": "#ffffff00",
+      "navigationTintColor": "#ffffff",
+      "navigationTitleColor": "#ffffff",
+      "navigationTitleFont": "HelveticaNeue-Light, 22",
+      "backIndicatorImage": "back_arrow@2x.png",
+      "backIndicatorNoText": true,
+      "rightBarButtonItem": {
+        "id": "right_bar_button",
+        "type": "barButtonItem",
+        "style": "UIBarButtonItemStyleBordered",
+        "title": "Submit",
+        "actions": "this.submitSubmission();"
+      }
+    },
+    "keyboardManager": {
+      "enable": true,
+      "enableAutoToolbar": false
+    }
+  },
+  "view": {
+    "id": "whole_ui",
+    "type": "view",
+    "backgroundColor": "#404040",
+    "subviews": [
+      {
+        "id": "content_wrapper",
+        "type": "view",
+        "subviews": [
+          {
+            "id": "screen_background",
+            "type": "imageView",
+            "image": "all_background.png"
+          },
+          {
+            "id": "header_background",
+            "type": "view"
+          },
+          {
+            "id" : "share_a_link_scroll_view",
+            "type" : "scrollView",
+            "backgroundColor_": "#ff000080",
+            "autoLayoutKeyboardHandling_": true,
+            "subviews": [
+              {
+                "id": "internal_view",
+                "type": "view",
+                "backgroundColor_": "#00ff0080",
+                "subviews": [
+                  {
+                    "id": "url_label",
+                    "type": "label",
+                    "text": "URL",
+                    "font": "HelveticaNeue-Light, 16",
+                    "textColor": "#c0c0c0",
+                    "gestureRecognizers": [
+                      {
+                        "id" : "tapGROnUrlLabel",
+                        "gestureType" : "tap",
+                        "numberOfTapsRequired" : 1,
+                        "numberOfTouchesRequired" : 1,
+                        "gestureActions" : "this.putFocusOnUrl();"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "url_tf",
+                    "type": "textField",
+                    "backgroundColor": "#ff000000",
+                    "textColor": "#ffffff",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "borderStyle": "UITextBorderStyleNone",
+                    "keyboardType": "UIKeyboardTypeURL",
+                    "autocapitalizationType": "UITextAutocapitalizationTypeNone",
+                    "autocorrectionType": "UITextAutocorrectionTypeNo",
+                    "keyboardAppearance_": "UIKeyboardAppearanceDark",
+                    "font": "HelveticaNeue-Light, 16",
+                    "returnKeyType": "UIReturnKeyDone",
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "mode": "twoWay",
+                        "data": "this.submissionUrl"
+                      },
+                      {
+                        "property": "enabled",
+                        "data": "this.submissionUrlEnabled"
+                      },
+                      {
+                        "property": "textColor",
+                        "data": "this.submissionUrlTextColor"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "url_separator_line",
+                    "type": "view",
+                    "backgroundColor": "#ffffffaa"
+                  },
+                  {
+                    "id": "title_label",
+                    "type": "label",
+                    "text": "Title",
+                    "font": "HelveticaNeue-Light, 16",
+                    "textColor": "#c0c0c0",
+                    "gestureRecognizers": [
+                      {
+                        "id" : "tapGROnTitleLabel",
+                        "gestureType" : "tap",
+                        "numberOfTapsRequired" : 1,
+                        "numberOfTouchesRequired" : 1,
+                        "gestureActions" : "this.putFocusOnTitle();"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "title_tf",
+                    "type": "textField",
+                    "backgroundColor": "#ff000000",
+                    "textColor": "#ffffff",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "borderStyle": "UITextBorderStyleNone",
+                    "font": "HelveticaNeue-Light, 16",
+                    "returnKeyType": "UIReturnKeyDone",
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "mode": "twoWay",
+                        "data": "this.submissionTitle"
+                      },
+                      {
+                        "property": "enabled",
+                        "data": "this.submissionTitleEnabled"
+                      },
+                      {
+                        "property": "textColor",
+                        "data": "this.submissionTitleTextColor"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "title_button",
+                    "type": "button",
+                    "hidden": true,
+                    "normalImage": "idea_64.png",
+                    "touchUpInsideActions": "this.suggestTitle();"
+                  },
+                  {
+                    "id": "title_separator_line",
+                    "type": "view",
+                    "backgroundColor": "#ffffffaa"
+                  },
+                  {
+                    "id": "subverse_label",
+                    "type": "label",
+                    "text": "Subverse",
+                    "font": "HelveticaNeue-Light, 16",
+                    "textColor": "#c0c0c0",
+                    "gestureRecognizers": [
+                      {
+                        "id" : "tapGROnSubverseLabel",
+                        "gestureType" : "tap",
+                        "numberOfTapsRequired" : 1,
+                        "numberOfTouchesRequired" : 1,
+                        "gestureActions" : "this.putFocusOnSubverse();"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subverse_tf",
+                    "type": "textField",
+                    "backgroundColor": "#ff000000",
+                    "textColor": "#ffffff",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "borderStyle": "UITextBorderStyleNone",
+                    "font": "HelveticaNeue-Light, 16",
+                    "autocapitalizationType": "UITextAutocapitalizationTypeNone",
+                    "autocorrectionType": "UITextAutocorrectionTypeNo",
+                    "returnKeyType": "UIReturnKeyDone",
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "mode": "twoWay",
+                        "data": "this.submissionSubverse"
+                      },
+                      {
+                        "property": "enabled",
+                        "data": "this.submissionSubverseEnabled"
+                      },
+                      {
+                        "property": "textColor",
+                        "data": "this.submissionSubverseTextColor"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subverse_button",
+                    "type": "button",
+                    "normalTitle": "⋮",
+                    "font": "SystemBold, 30",
+                    "touchUpInsideActions": "this.selectSubverse();",
+                    "dataBinding": [
+                      {
+                        "property": "enabled",
+                        "data": "this.submissionSubverseEnabled"
+                      },
+                      {
+                        "property": "normalTitleColor",
+                        "data": "this.submissionSubverseTextColor"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subverse_separator_line",
+                    "type": "view",
+                    "backgroundColor": "#ffffffaa"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "visualFormat": "H:|-16-[url_label]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-21-[url_tf]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[url_separator_line]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[title_label]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-21-[title_tf]-0-[title_button(==0)]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[title_separator_line]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[subverse_label]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-21-[subverse_tf]-0-[subverse_button(==26)]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[subverse_separator_line]-16-|"
+                  },
+                  {
+                    "visualFormat": "V:|-8-[url_label(==20)]-0-[url_tf(==30)]-0-[url_separator_line(==0.5)]-20-[title_label(==20)]-0-[title_tf(==30)]-0-[title_separator_line(==0.5)]-20-[subverse_label(==20)]-0-[subverse_tf(==30)]-0-[subverse_separator_line(==0.5)]-16-|"
+                  },
+                  {
+                    "visualFormat": "V:[title_label]-0-[title_button]-4-[title_separator_line]"
+                  },
+                  {
+                    "visualFormat": "V:[subverse_label]-0-[subverse_button]-4-[subverse_separator_line]"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "visualFormat": "H:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[header_background]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[share_a_link_scroll_view]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[header_background(==64)]-0-[share_a_link_scroll_view]"
+          },
+          {
+            "withItem": "internal_view",
+            "withItemAttribute": "NSLayoutAttributeLeading",
+            "relatedBy": "NSLayoutRelationEqual",
+            "toItem": "content_wrapper",
+            "toItemAttribute": "NSLayoutAttributeLeading",
+            "multiplier": "1",
+            "constant": "0"
+          },
+          {
+            "withItem": "internal_view",
+            "withItemAttribute": "NSLayoutAttributeTrailing",
+            "relatedBy": "NSLayoutRelationEqual",
+            "toItem": "content_wrapper",
+            "toItemAttribute": "NSLayoutAttributeTrailing",
+            "multiplier": "1",
+            "constant": "0"
+          },
+          {
+            "withItem": "share_a_link_scroll_view",
+            "withItemAttribute": "NSLayoutAttributeHeight",
+            "relatedBy": "NSLayoutRelationEqual",
+            "toItem": "internal_view",
+            "toItemAttribute": "NSLayoutAttributeHeight",
+            "multiplier": "1",
+            "constant": "0"
+          }
+        ]
+      }
+    ],
+    "constraints": [
+      {
+        "visualFormat": "H:|-0-[content_wrapper]-0-|"
+      },
+      {
+        "visualFormat": "V:|-(-64)-[content_wrapper]-0-|"
+      }
+    ]
+  }
+}

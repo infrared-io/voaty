@@ -1,0 +1,294 @@
+{
+  "id": "voaty_discuss",
+  "controller": {
+    "supportedInterfaceOrientations": "UIInterfaceOrientationPortrait | UIInterfaceOrientationPortraitUpsideDown",
+    "title": "Discuss",
+    "preferredStatusBarStyle": "UIStatusBarStyleLightContent",
+    "navigationController": {
+      "autoAddIfNeeded": true,
+      "hideNavigationBar": false,
+      "navigationBarTranslucent": true,
+      "navigationBarTintColor": "#ffffff00",
+      "navigationTintColor": "#ffffff",
+      "navigationTitleColor": "#ffffff",
+      "navigationTitleFont": "HelveticaNeue-Light, 22",
+      "backIndicatorImage": "back_arrow@2x.png",
+      "backIndicatorNoText": true,
+      "rightBarButtonItem": {
+        "id": "right_bar_button",
+        "type": "barButtonItem",
+        "style": "UIBarButtonItemStyleBordered",
+        "title": "Submit",
+        "actions": "this.submitSubmission();"
+      }
+    },
+    "keyboardManager": {
+      "enable": true,
+      "enableAutoToolbar": false
+    }
+  },
+  "view": {
+    "id": "whole_ui",
+    "type": "view",
+    "backgroundColor": "#404040",
+    "subviews": [
+      {
+        "id": "content_wrapper",
+        "type": "view",
+        "subviews": [
+          {
+            "id": "screen_background",
+            "type": "imageView",
+            "image": "all_background.png"
+          },
+          {
+            "id": "header_background",
+            "type": "view"
+          },
+          {
+            "id" : "share_a_link_scroll_view",
+            "type" : "scrollView",
+            "backgroundColor_": "#ff000080",
+            "subviews": [
+              {
+                "id": "internal_view",
+                "type": "view",
+                "backgroundColor_": "#00ff0080",
+                "subviews": [
+                  {
+                    "id": "title_label",
+                    "type": "label",
+                    "text": "Title",
+                    "font": "HelveticaNeue-Light, 16",
+                    "textColor": "#c0c0c0",
+                    "gestureRecognizers": [
+                      {
+                        "id" : "tapGROnTitleLabel",
+                        "gestureType" : "tap",
+                        "numberOfTapsRequired" : 1,
+                        "numberOfTouchesRequired" : 1,
+                        "gestureActions" : "this.putFocusOnTitle();"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "title_tv",
+                    "type": "textView",
+                    "textColor": "#ffffff",
+                    "textAlignment_": "NSTextAlignmentLeft",
+                    "borderStyle_": "UITextBorderStyleNone",
+                    "font": "HelveticaNeue-Light, 16",
+                    "borderWidth": "0.5",
+                    "borderColor": "#ffffffaa",
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "mode": "twoWay",
+                        "data": "this.submissionTitle"
+                      },
+                      {
+                        "property": "textColor",
+                        "data": "this.submissionTitleTextColor"
+                      },
+                      {
+                        "property": "enabled",
+                        "data": "this.submissionTitleEnabled"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subverse_label",
+                    "type": "label",
+                    "text": "Subverse",
+                    "font": "HelveticaNeue-Light, 16",
+                    "textColor": "#c0c0c0",
+                    "gestureRecognizers": [
+                      {
+                        "id" : "tapGROnSubverseLabel",
+                        "gestureType" : "tap",
+                        "numberOfTapsRequired" : 1,
+                        "numberOfTouchesRequired" : 1,
+                        "gestureActions" : "this.putFocusOnSubverse();"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subverse_tf",
+                    "type": "textField",
+                    "textColor": "#ffffff",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "borderStyle": "UITextBorderStyleNone",
+                    "autocapitalizationType": "UITextAutocapitalizationTypeNone",
+                    "autocorrectionType": "UITextAutocorrectionTypeNo",
+                    "font": "HelveticaNeue-Light, 16",
+                    "returnKeyType": "UIReturnKeyDone",
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "mode": "twoWay",
+                        "data": "this.submissionSubverse"
+                      },
+                      {
+                        "property": "textColor",
+                        "data": "this.submissionSubverseTextColor"
+                      },
+                      {
+                        "property": "enabled",
+                        "data": "this.submissionSubverseEnabled"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subverse_button",
+                    "type": "button",
+                    "normalTitle": "⋮",
+                    "font": "SystemBold, 30",
+                    "touchUpInsideActions": "this.selectSubverse();",
+                    "dataBinding": [
+                      {
+                        "property": "enabled",
+                        "data": "this.submissionSubverseEnabled"
+                      },
+                      {
+                        "property": "normalTitleColor",
+                        "data": "this.submissionSubverseTextColor"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subverse_separator_line",
+                    "type": "view",
+                    "backgroundColor": "#ffffffaa"
+                  },
+                  {
+                    "id": "message_label",
+                    "type": "label",
+                    "text": "Message",
+                    "font": "HelveticaNeue-Light, 16",
+                    "textColor": "#c0c0c0",
+                    "gestureRecognizers": [
+                      {
+                        "id" : "tapGROnMessageLabel",
+                        "gestureType" : "tap",
+                        "numberOfTapsRequired" : 1,
+                        "numberOfTouchesRequired" : 1,
+                        "gestureActions" : "this.putFocusOnMessage();"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "message_tv",
+                    "type": "textView",
+                    "backgroundColor": "#ff000000",
+                    "textColor": "#ffffff",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "font": "HelveticaNeue-Light, 16",
+                    "borderWidth": "0.5",
+                    "borderColor": "#ffffffaa",
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "mode": "twoWay",
+                        "data": "this.submissionMessage"
+                      }
+                    ]
+                  }
+                ],
+                "constraints": [
+                  {
+                    "visualFormat": "H:|-16-[title_label]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[title_tv]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[subverse_label]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-21-[subverse_tf]-0-[subverse_button(==26)]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[subverse_separator_line]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[message_label]-16-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[message_tv]-16-|"
+                  },
+                  {
+                    "visualFormat": "V:|-8-[title_label(==20)]-8-[title_tv(==56)]-16-[subverse_label(==20)]-0-[subverse_tf(==30)]-0-[subverse_separator_line(==0.5)]-20-[message_label(==20)]-8-[message_tv(==200)]-24-|"
+                  },
+                  {
+                    "visualFormat": "V:[subverse_label]-0-[subverse_button]-4-[subverse_separator_line]"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "visualFormat": "H:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[header_background]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[share_a_link_scroll_view]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[header_background(==64)]-0-[share_a_link_scroll_view]"
+          },
+          {
+            "withItem": "internal_view",
+            "withItemAttribute": "NSLayoutAttributeLeading",
+            "relatedBy": "NSLayoutRelationEqual",
+            "toItem": "content_wrapper",
+            "toItemAttribute": "NSLayoutAttributeLeading",
+            "multiplier": "1",
+            "constant": "0"
+          },
+          {
+            "withItem": "internal_view",
+            "withItemAttribute": "NSLayoutAttributeTrailing",
+            "relatedBy": "NSLayoutRelationEqual",
+            "toItem": "content_wrapper",
+            "toItemAttribute": "NSLayoutAttributeTrailing",
+            "multiplier": "1",
+            "constant": "0"
+          },
+          {
+            "withItem_": "internal_view",
+            "withItemAttribute": "NSLayoutAttributeHeight",
+            "relatedBy": "NSLayoutRelationEqual",
+            "toItem_": "content_wrapper",
+            "toItemAttribute": "NSLayoutAttributeHeight",
+            "multiplier": "1",
+            "constant": "-64"
+          },
+          {
+            "withItem": "share_a_link_scroll_view",
+            "withItemAttribute": "NSLayoutAttributeHeight",
+            "relatedBy": "NSLayoutRelationEqual",
+            "toItem": "internal_view",
+            "toItemAttribute": "NSLayoutAttributeHeight",
+            "multiplier": "1",
+            "constant": "0"
+          }
+        ]
+      }
+    ],
+    "constraints": [
+      {
+        "visualFormat": "H:|-0-[content_wrapper]-0-|"
+      },
+      {
+        "visualFormat": "V:|-(-64)-[content_wrapper]-0-|"
+      }
+    ]
+  }
+}

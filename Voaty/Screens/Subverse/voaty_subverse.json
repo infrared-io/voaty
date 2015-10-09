@@ -1,0 +1,1585 @@
+{
+  "id": "voaty_subverse",
+  "controller": {
+    "supportedInterfaceOrientations": "UIInterfaceOrientationPortrait | UIInterfaceOrientationPortraitUpsideDown",
+    "title": "",
+    "preferredStatusBarStyle": "UIStatusBarStyleLightContent",
+    "navigationController": {
+      "autoAddIfNeeded": true,
+      "hideNavigationBar": false,
+      "navigationBarTranslucent": true,
+      "navigationBarTintColor": "#ffffff00",
+      "navigationTintColor": "#ffffff",
+      "navigationTitleColor": "#ffffff",
+      "navigationTitleFont": "HelveticaNeue-Light, 22",
+      "backIndicatorImage": "back_arrow@2x.png",
+      "backIndicatorNoText": true,
+      "titleView": {
+        "id": "titleViewHolder",
+        "type": "view",
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 40
+        },
+        "subviews": [
+          {
+            "id": "titleViewButtonHolder",
+            "type": "view",
+            "subviews": [
+              {
+                "id": "titleViewButton",
+                "type": "button",
+                "normalTitle": "",
+                "font": "HelveticaNeue-Light, 22",
+                "touchUpInsideActions": "this.showSubverseList();",
+                "dataBinding": [
+                  {
+                    "property": "normalTitle",
+                    "data": "this.subverseTitle"
+                  },
+                  {
+                    "property": "titleLabel.numberOfLines",
+                    "data": "this.titleLabel_numberOfLines"
+                  },
+                  {
+                    "property": "titleLabel.lineBreakMode",
+                    "data": "this.titleLabel_lineBreakMode"
+                  },
+                  {
+                    "property": "titleLabel.adjustsFontSizeToFitWidth",
+                    "data": "this.titleLabel_adjustsFontSizeToFitWidth"
+                  },
+                  {
+                    "property": "titleLabel.minimumScaleFactor",
+                    "data": "this.titleLabel_minimumScaleFactor"
+                  }
+                ]
+              },
+              {
+                "id": "titleViewButtonUnderline",
+                "type": "view",
+                "backgroundColor": "#ffffffaa",
+                "hidden": true,
+                "dataBinding": [
+                  {
+                    "property": "hidden",
+                    "data": "this.disableSubverseListSelection"
+                  }
+                ]
+              }
+            ],
+            "constraints": [
+              {
+                "visualFormat": "V:|-0-[titleViewButton]-0-|"
+              },
+              {
+                "visualFormat": "V:[titleViewButton]-(-6)-[titleViewButtonUnderline(==0.5)]"
+              },
+              {
+                "withItem": "titleViewButton",
+                "withItemAttribute": "NSLayoutAttributeCenterX",
+                "relatedBy": "NSLayoutRelationEqual",
+                "toItem": "titleViewButtonHolder",
+                "toItemAttribute": "NSLayoutAttributeCenterX",
+                "multiplier": "1",
+                "constant": ""
+              },
+              {
+                "withItem": "titleViewButton",
+                "withItemAttribute": "NSLayoutAttributeWidth",
+                "relatedBy": "NSLayoutRelationLessThanOrEqual",
+                "toItem": "titleViewButtonHolder",
+                "toItemAttribute": "NSLayoutAttributeWidth",
+                "multiplier": "1",
+                "constant": ""
+              },
+              {
+                "withItem": "titleViewButtonUnderline",
+                "withItemAttribute": "NSLayoutAttributeWidth",
+                "relatedBy": "NSLayoutRelationEqual",
+                "toItem": "titleViewButton",
+                "toItemAttribute": "NSLayoutAttributeWidth",
+                "multiplier": "1",
+                "constant": ""
+              },
+              {
+                "withItem": "titleViewButtonUnderline",
+                "withItemAttribute": "NSLayoutAttributeLeading",
+                "relatedBy": "NSLayoutRelationEqual",
+                "toItem": "titleViewButton",
+                "toItemAttribute": "NSLayoutAttributeLeading",
+                "multiplier": "1",
+                "constant": ""
+              }
+            ]
+          },
+          {
+            "id": "sortingButton",
+            "type": "button",
+            "font": "HelveticaNeue, 18",
+            "touchUpInsideActions": "this.showSortingOptions();",
+            "contentHorizontalAlignment": "UIControlContentHorizontalAlignmentRight",
+            "dataBinding": [
+              {
+                "property": "normalTitle",
+                "data": "this.currentSortOptionString"
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "visualFormat": "H:|-40-[titleViewButtonHolder]-2-[sortingButton(==38)]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[titleViewButtonHolder]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[sortingButton]-0-|"
+          },
+          {
+            "withItem_": "titleViewButtonHolder",
+            "withItemAttribute": "NSLayoutAttributeCenterX",
+            "relatedBy": "NSLayoutRelationEqual",
+            "toItem_": "titleViewHolder",
+            "toItemAttribute": "NSLayoutAttributeCenterX",
+            "multiplier": "1",
+            "constant": ""
+          }
+        ]
+      },
+      "leftBarButtonItem": {
+        "id": "left_bar_button",
+        "type": "barButtonItem",
+        "style": "UIBarButtonItemStyleBordered",
+        "customView": {
+          "id": "right_bar_button_holder",
+          "type": "view",
+          "frame": {
+            "x": -4,
+            "y": -4,
+            "width": 40,
+            "height": 30
+          },
+          "subviews": [
+            {
+              "id": "left_bar_inner_button",
+              "type": "button",
+              "frame": {
+                "x": 0,
+                "y": 0,
+                "width": 40,
+                "height": 30
+              },
+              "normalImage": "user_50.png",
+              "touchUpInsideActions": "this.showMyAccount();"
+            }
+          ]
+        }
+      },
+      "rightBarButtonItem_": {
+        "id": "right_bar_button",
+        "type": "barButtonItem",
+        "style": "UIBarButtonItemStyleBordered",
+        "identifier": "UIBarButtonSystemItemAdd",
+        "actions": "this.moreOptions();"
+      },
+      "rightBarButtonItem": {
+        "id": "right_bar_button",
+        "type": "barButtonItem",
+        "style": "UIBarButtonItemStyleBordered",
+        "customView": {
+          "id": "right_bar_inner_button",
+          "type": "button",
+          "frame": {
+            "x": -4,
+            "y": -4,
+            "width": 30,
+            "height": 30
+          },
+          "normalTitle": "⋮",
+          "font": "SystemBold, 30",
+          "touchUpInsideActions": "this.moreOptions();"
+        }
+      }
+    }
+  },
+  "view": {
+    "id": "whole_ui",
+    "type": "view",
+    "backgroundColor": "#404040",
+    "subviews": [
+      {
+        "id": "content_wrapper",
+        "type": "view",
+        "subviews": [
+          {
+            "id": "screen_background",
+            "type": "imageView",
+            "image": "all_background.png"
+          },
+          {
+            "id": "header_background",
+            "type": "view"
+          },
+          {
+            "id": "subverse_table_view",
+            "type": "tableView",
+            "rowHeight": 62,
+            "alwaysBounceVertical": true,
+            "separatorStyle": "UITableViewCellSeparatorStyleNone",
+            "autoLayoutKeyboardHandling": true,
+            "selectRowAction": "this.showSubmission(data);",
+            "dataBinding": [
+              {
+                "property": "tableData",
+                "data": "this.tableData"
+              }
+            ],
+            "subviews": [
+              {
+                "id": "refreshControl",
+                "type": "refreshControl",
+                "tintColor": "#ffffff",
+                "valueChangedActions": "this.pullToRefreshData(control, event);"
+              }
+            ],
+            "tableHeaderView" : {
+              "id" : "tableHeaderView1",
+              "type" : "view",
+              "backgroundColor_" : "#f1f1f1",
+              "frame" : {
+                "x" : 0,
+                "y" : 0,
+                "width" : 0,
+                "height" : 40
+              },
+              "subviews" : [
+                {
+                  "id" : "backgroundWithBorder",
+                  "type" : "view",
+                  "cornerRadius" : 16,
+                  "borderColor" : "#a0a0a0",
+                  "borderWidth" : 1
+                },
+                {
+                  "id" : "searchTextField",
+                  "type" : "textField",
+                  "textColor" : "#ffffff",
+                  "font" : "HelveticaNeue-Light, 18",
+                  "returnKeyType": "UIReturnKeyDone",
+                  "dataBinding": [
+                    {
+                      "property": "text",
+                      "mode": "twoWay",
+                      "data": "this.searchText"
+                    }
+                  ]
+                },
+                {
+                  "id" : "buttonsHolder",
+                  "type" : "view",
+                  "cornerRadius" : 12,
+                  "borderColor" : "#a0a0a0",
+                  "borderWidth" : 1,
+                  "subviews": [
+                    {
+                      "id": "searchButton",
+                      "type": "button",
+                      "normalTitle": "Search",
+                      "normalTitleColor": "#ffffff",
+                      "font": "HelveticaNeue-Light, 16",
+                      "touchUpInsideActions": "this.searchCurrentSubverse();"
+                    },
+                    {
+                      "id": "separatorView",
+                      "type": "view",
+                      "backgroundColor" : "#a0a0a0"
+                    },
+                    {
+                      "id": "clearButton",
+                      "type": "button",
+                      "normalTitle": "×",
+                      "font": "Arial, 32",
+                      "normalTitleColor": "#ffffff",
+                      "touchUpInsideActions": "this.clearSearchForCurrentSubverse();"
+                    }
+                  ],
+                  "constraints": [
+                    {
+                      "visualFormat": "H:|-0-[searchButton(==70)]-0-[separatorView(==1)]-0-[clearButton(==35)]-0-|"
+                    },
+                    {
+                      "visualFormat": "V:|-0-[searchButton]-0-|"
+                    },
+                    {
+                      "visualFormat": "V:|-0-[separatorView]-0-|"
+                    },
+                    {
+                      "visualFormat": "V:|-0-[clearButton]-0-|"
+                    }
+                  ]
+                }
+              ],
+              "constraints" : [
+                {
+                  "visualFormat": "H:|-16-[backgroundWithBorder]-16-|"
+                },
+                {
+                  "visualFormat": "V:|-2-[backgroundWithBorder]-4-|"
+                },
+                {
+                  "visualFormat": "H:|-32-[searchTextField]-0-[buttonsHolder(==105)]-20-|"
+                },
+                {
+                  "visualFormat": "V:|-2-[searchTextField]-4-|"
+                },
+                {
+                  "visualFormat": "V:|-6-[buttonsHolder]-8-|"
+                }
+              ]
+            },
+            "tableFooterView" : {
+              "id" : "tableFooterView1",
+              "type" : "view",
+              "frame" : {
+                "x" : 0,
+                "y" : 0,
+                "width" : 0,
+                "height" : 60
+              },
+              "subviews" : [
+                {
+                  "id" : "activityIndicator",
+                  "type" : "activityIndicatorView",
+                  "activityIndicatorViewStyle" : "UIActivityIndicatorViewStyleWhiteLarge",
+                  "animating" : false
+                },
+                {
+                  "id" : "tableFooterViewButton",
+                  "type" : "button",
+                  "normalTitle" : "Load more ...",
+                  "normalTitleColor" : "#ffffff",
+                  "font" : "HelveticaNeue-Light, 18",
+                  "touchUpInsideActions": "this.loadNextPage();",
+                  "dataBinding" : [
+                    {
+                      "property" : "hidden",
+                      "data" : "this.loadMoreHidden"
+                    },
+                    {
+                      "property" : "normalTitle",
+                      "data" : "this.loadMoreMessage"
+                    },
+                    {
+                      "property" : "enabled",
+                      "data" : "this.loadMoreEnabled"
+                    }
+                  ]
+                }
+              ],
+              "constraints" : [
+                {
+                  "visualFormat" : "H:|-0-[activityIndicator]-0-|"
+                },
+                {
+                  "visualFormat" : "V:|-0-[activityIndicator]-0-|"
+                },
+                {
+                  "visualFormat" : "H:|-0-[tableFooterViewButton]-0-|"
+                },
+                {
+                  "visualFormat" : "V:|-0-[tableFooterViewButton]-0-|"
+                }
+              ]
+            },
+            "cells": [
+              {
+                "id": "subverse_cell",
+                "type": "tableViewCell",
+                "selectionStyle": "UITableViewCellSelectionStyleNone",
+                "dynamicAutolayoutRowHeight": true,
+                "dynamicAutolayoutRowHeightMinimum_": 62,
+                "subviews": [
+                  {
+                    "id": "userImage",
+                    "type": "imageView",
+                    "backgroundColor": "#ffffff80",
+                    "cornerRadius": 5,
+                    "borderColor": "#ffffff",
+                    "borderWidth": 1,
+                    "dataBinding": [
+                      {
+                        "property": "image",
+                        "data": "cell.thumbnail"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "titleLabel",
+                    "type": "label",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "backgroundColor": "#ff000000",
+                    "font": "HelveticaNeue-Light, 18",
+                    "numberOfLines": 0,
+                    "lineBreakMode": "NSLineBreakByTruncatingTail",
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "data": "cell.title"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 1000,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisVertical"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "timeAgoLabel",
+                    "type": "label",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "backgroundColor": "#0000ff00",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "numberOfLines": 1,
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "data": "cell.timeAgo"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "commentCountLabel",
+                    "type": "label",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "backgroundColor": "#0000ff00",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "numberOfLines": 1,
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "data": "cell.commentCount"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "commentIcon",
+                    "type": "imageView",
+                    "image": "comment_64.png",
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "viewsCountLabel",
+                    "type": "label",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "backgroundColor": "#0000ff00",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "numberOfLines": 1,
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "data": "cell.views"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "viewsIcon",
+                    "type": "imageView",
+                    "image": "my_eye_64.png",
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "voteIcon",
+                    "type": "imageView",
+                    "image": "up_64.png",
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "submissionVotesLabel",
+                    "type": "label",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "numberOfLines": 1,
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "data": "cell.pointsString"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 750,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 250,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "userNamePrefixLabel",
+                    "type": "label",
+                    "text": "by",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "backgroundColor": "#0000ff00",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "numberOfLines": 1,
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "userNameLabel",
+                    "type": "button",
+                    "normalTitleColor": "#ffffff",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "touchUpInsideActions": "this.showUser(data);",
+                    "dataBinding": [
+                      {
+                        "property": "normalTitle",
+                        "data": "cell.userName"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "userNameUnderline",
+                    "type": "view",
+                    "backgroundColor": "#ffffffaa",
+                    "dataBinding": [
+                      {
+                        "property": "hidden",
+                        "data": "cell.userNameUnderlineHidden"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subversePrefixLabel",
+                    "type": "label",
+                    "text": "in",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "numberOfLines": 1,
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subverseButton",
+                    "type": "button",
+                    "normalTitleColor": "#ffffff",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "contentHorizontalAlignment_" : "UIControlContentHorizontalAlignmentLeft",
+                    "touchUpInsideActions": "this.showSubverse(data);",
+                    "dataBinding": [
+                      {
+                        "property": "normalTitle",
+                        "data": "cell.subverse"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subverseUnderline",
+                    "type": "view",
+                    "backgroundColor": "#ffffffaa"
+                  },
+                  {
+                    "id": "externalLinkSeparator",
+                    "type": "view",
+                    "backgroundColor": "#ffffffaa",
+                    "dataBinding": [
+                      {
+                        "property": "hidden",
+                        "data": "cell.hideUrlLabel"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "externalLinkButton",
+                    "type": "button",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "normalTitleColor": "#ffffff",
+                    "lineBreakMode": "NSLineBreakByTruncatingTail",
+                    "contentHorizontalAlignment" : "UIControlContentHorizontalAlignmentLeft",
+                    "touchUpInsideActions": "this.openLinkInSafari(data.url);",
+                    "dataBinding": [
+                      {
+                        "property": "hidden",
+                        "data": "cell.hideUrlLabel"
+                      },
+                      {
+                        "property": "normalTitle",
+                        "data": "cell.baseUrl"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 100,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "externalLinkUnderline",
+                    "type": "view",
+                    "backgroundColor": "#ffffffaa",
+                    "dataBinding": [
+                      {
+                        "property": "hidden",
+                        "data": "cell.hideUrlLabel"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subverseMoreOptionsButton",
+                    "type": "button",
+                    "normalTitle": "⋮",
+                    "normalTitleColor": "#ffffff",
+                    "font": "SystemBold, 30",
+                    "touchUpInsideActions": "this.moreSubverseOptions(data);"
+                  },
+                  {
+                    "id": "bottom_cell_separator",
+                    "type": "view",
+                    "backgroundColor": "#a0a0a0"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "visualFormat": "H:|-16-[userImage(==50)]-8-[titleLabel]-(-4)-[subverseMoreOptionsButton(==35)]-0-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[timeAgoLabel]-16-[commentCountLabel]-4-[commentIcon(==20)]-16-[viewsCountLabel]-4-[viewsIcon(==22)]-16-[voteIcon(==0)]-4-[submissionVotesLabel]-(-4)-[subverseMoreOptionsButton]"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[userNamePrefixLabel]-6-[userNameLabel]-6-[subversePrefixLabel]-6-[subverseButton]-10-[externalLinkSeparator(==0.5)]-10-[externalLinkButton]"
+                  },
+                  {
+                    "visualFormat": "V:|-6-[userImage(==50)]"
+                  },
+                  {
+                    "visualFormat": "V:|-6-[titleLabel]-47-|"
+                  },
+                  {
+                    "visualFormat": "V:[timeAgoLabel(==20)]-0-[userNamePrefixLabel(==20)]-6-[bottom_cell_separator(==0.5)]-0-|"
+                  },
+                  {
+                    "visualFormat": "V:[userNameLabel]-(-6)-[userNameUnderline(==0.5)]"
+                  },
+                  {
+                    "visualFormat": "V:[subverseButton]-(-6)-[subverseUnderline(==0.5)]"
+                  },
+                  {
+                    "visualFormat": "V:[externalLinkSeparator(==15)]"
+                  },
+                  {
+                    "visualFormat": "V:[externalLinkButton]-(-6)-[externalLinkUnderline(==0.5)]"
+                  },
+                  {
+                    "visualFormat": "V:|-10-[subverseMoreOptionsButton(==35)]"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[bottom_cell_separator]-0-|"
+                  },
+                  {
+                    "visualFormat": "V:[commentIcon(==16)]"
+                  },
+                  {
+                    "visualFormat": "V:[viewsIcon(==22)]"
+                  },
+                  {
+                    "visualFormat": "V:[voteIcon(==20)]"
+                  },
+                  {
+                    "withItem": "titleLabel",
+                    "withItemAttribute": "NSLayoutAttributeHeight",
+                    "relatedBy": "NSLayoutRelationGreaterThanOrEqual",
+                    "toItem": "userImage",
+                    "toItemAttribute": "NSLayoutAttributeHeight",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "commentCountLabel",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "timeAgoLabel",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "commentIcon",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "timeAgoLabel",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "viewsCountLabel",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "timeAgoLabel",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "viewsIcon",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "timeAgoLabel",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "voteIcon",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "timeAgoLabel",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "submissionVotesLabel",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "timeAgoLabel",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "userNameLabel",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "userNamePrefixLabel",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "subversePrefixLabel",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "userNamePrefixLabel",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "subverseButton",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "userNamePrefixLabel",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "externalLinkSeparator",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "userNamePrefixLabel",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": "1"
+                  },
+                  {
+                    "withItem": "externalLinkButton",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "userNamePrefixLabel",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "subverseUnderline",
+                    "withItemAttribute": "NSLayoutAttributeWidth",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "subverseButton",
+                    "toItemAttribute": "NSLayoutAttributeWidth",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "subverseUnderline",
+                    "withItemAttribute": "NSLayoutAttributeLeading",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "subverseButton",
+                    "toItemAttribute": "NSLayoutAttributeLeading",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "userNameUnderline",
+                    "withItemAttribute": "NSLayoutAttributeWidth",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "userNameLabel",
+                    "toItemAttribute": "NSLayoutAttributeWidth",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "userNameUnderline",
+                    "withItemAttribute": "NSLayoutAttributeLeading",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "userNameLabel",
+                    "toItemAttribute": "NSLayoutAttributeLeading",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "externalLinkUnderline",
+                    "withItemAttribute": "NSLayoutAttributeWidth",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "externalLinkButton",
+                    "toItemAttribute": "NSLayoutAttributeWidth",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "externalLinkUnderline",
+                    "withItemAttribute": "NSLayoutAttributeLeading",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "externalLinkButton",
+                    "toItemAttribute": "NSLayoutAttributeLeading",
+                    "multiplier": "1",
+                    "constant": ""
+                  }
+                ]
+              },
+              {
+                "id": "subverse_cell_without_image",
+                "type": "tableViewCell",
+                "selectionStyle": "UITableViewCellSelectionStyleNone",
+                "dynamicAutolayoutRowHeight": true,
+                "dynamicAutolayoutRowHeightMinimum_": 62,
+                "accessoryType_": "UITableViewCellAccessoryDisclosureIndicator",
+                "subviews": [
+                  {
+                    "id": "titleLabel2",
+                    "type": "label",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "backgroundColor": "#ff000000",
+                    "font": "HelveticaNeue-Light, 18",
+                    "numberOfLines": 0,
+                    "lineBreakMode": "NSLineBreakByTruncatingTail",
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "data": "cell.title"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 1000,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisVertical"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "timeAgoLabel2",
+                    "type": "label",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "backgroundColor": "#0000ff00",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "numberOfLines": 1,
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "data": "cell.timeAgo"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "commentCountLabel2",
+                    "type": "label",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "backgroundColor": "#0000ff00",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "numberOfLines": 1,
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "data": "cell.commentCount"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "commentIcon2",
+                    "type": "imageView",
+                    "image": "comment_64.png",
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "viewsCountLabel2",
+                    "type": "label",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "backgroundColor": "#0000ff00",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "numberOfLines": 1,
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "data": "cell.views"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "viewsIcon2",
+                    "type": "imageView",
+                    "image": "my_eye_64.png",
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "voteIcon2",
+                    "type": "imageView",
+                    "image": "down_64.png",
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "submissionVotesLabel2",
+                    "type": "label",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "backgroundColor": "#ff000000",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "numberOfLines": 1,
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "data": "cell.pointsString"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 750,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 250,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "userNamePrefixLabel2",
+                    "type": "label",
+                    "text": "by",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "backgroundColor": "#0000ff00",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "numberOfLines": 1,
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "userNameLabel2",
+                    "type": "button",
+                    "normalTitleColor": "#ffffff",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "touchUpInsideActions": "this.showUser(data);",
+                    "dataBinding": [
+                      {
+                        "property": "normalTitle",
+                        "data": "cell.userName"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "userNameUnderline2",
+                    "type": "view",
+                    "backgroundColor": "#ffffffaa",
+                    "dataBinding": [
+                      {
+                        "property": "hidden",
+                        "data": "cell.userNameUnderlineHidden"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subversePrefixLabel2",
+                    "type": "label",
+                    "text": "in",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "textColor": "#ffffff",
+                    "backgroundColor": "#0000ff00",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "numberOfLines": 1,
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subverseButton2",
+                    "type": "button",
+                    "normalTitleColor": "#ffffff",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "contentHorizontalAlignment_" : "UIControlContentHorizontalAlignmentLeft",
+                    "touchUpInsideActions": "this.showSubverse(data);",
+                    "dataBinding": [
+                      {
+                        "property": "normalTitle",
+                        "data": "cell.subverse"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 250,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subverseUnderline2",
+                    "type": "view",
+                    "backgroundColor": "#ffffffaa"
+                  },
+                  {
+                    "id": "externalLinkSeparator2",
+                    "type": "view",
+                    "backgroundColor": "#ffffffaa",
+                    "dataBinding": [
+                      {
+                        "property": "hidden",
+                        "data": "cell.hideUrlLabel"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "externalLinkButton2",
+                    "type": "button",
+                    "font": "HelveticaNeue-Thin, 14",
+                    "normalTitleColor": "#ffffff",
+                    "lineBreakMode": "NSLineBreakByTruncatingTail",
+                    "contentHorizontalAlignment" : "UIControlContentHorizontalAlignmentLeft",
+                    "touchUpInsideActions": "this.openLinkInSafari(data.url);",
+                    "dataBinding": [
+                      {
+                        "property": "hidden",
+                        "data": "cell.hideUrlLabel"
+                      },
+                      {
+                        "property": "normalTitle",
+                        "data": "cell.baseUrl"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "priority": 150,
+                        "contentRelationType": "compressionResistance",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      },
+                      {
+                        "priority": 750,
+                        "contentRelationType": "hugging",
+                        "forAxis": "UILayoutConstraintAxisHorizontal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "externalLinkUnderline2",
+                    "type": "view",
+                    "backgroundColor": "#ffffffaa",
+                    "dataBinding": [
+                      {
+                        "property": "hidden",
+                        "data": "cell.hideUrlLabel"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "subverseMoreOptionsButton2",
+                    "type": "button",
+                    "normalTitle": "⋮",
+                    "normalTitleColor": "#ffffff",
+                    "font": "SystemBold, 30",
+                    "touchUpInsideActions": "this.moreSubverseOptions(data);"
+                  },
+                  {
+                    "id": "bottom_cell_separator2",
+                    "type": "view",
+                    "backgroundColor": "#a0a0a0"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "visualFormat": "H:|-16-[titleLabel2]-(-4)-[subverseMoreOptionsButton2(==35)]-0-|"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[timeAgoLabel2]-16-[commentCountLabel2]-4-[commentIcon2(==20)]-16-[viewsCountLabel2]-4-[viewsIcon2(==22)]-16-[voteIcon2(==0)]-4-[submissionVotesLabel2]-(-4)-[subverseMoreOptionsButton2]"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[userNamePrefixLabel2]-6-[userNameLabel2]-6-[subversePrefixLabel2]-6-[subverseButton2]-10-[externalLinkSeparator2(==0.5)]-10-[externalLinkButton2]"
+                  },
+                  {
+                    "visualFormat": "V:|-6-[titleLabel2]-47-|"
+                  },
+                  {
+                    "visualFormat": "V:[timeAgoLabel2(==20)]-0-[userNamePrefixLabel2(==20)]-6-[bottom_cell_separator2(==0.5)]-0-|"
+                  },
+                  {
+                    "visualFormat": "V:[userNameLabel2]-(-6)-[userNameUnderline2(==0.5)]"
+                  },
+                  {
+                    "visualFormat": "V:[subverseButton2]-(-6)-[subverseUnderline2(==0.5)]"
+                  },
+                  {
+                    "visualFormat": "V:[externalLinkSeparator2(==15)]"
+                  },
+                  {
+                    "visualFormat": "V:[externalLinkButton2]-(-6)-[externalLinkUnderline2(==0.5)]"
+                  },
+                  {
+                    "visualFormat": "V:|-10-[subverseMoreOptionsButton2(==35)]"
+                  },
+                  {
+                    "visualFormat": "H:|-16-[bottom_cell_separator2]-0-|"
+                  },
+                  {
+                    "visualFormat": "V:[commentIcon2(==16)]"
+                  },
+                  {
+                    "visualFormat": "V:[viewsIcon2(==22)]"
+                  },
+                  {
+                    "visualFormat": "V:[voteIcon2(==20)]"
+                  },
+                  {
+                    "withItem": "commentCountLabel2",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "timeAgoLabel2",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "commentIcon2",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "timeAgoLabel2",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "viewsCountLabel2",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "timeAgoLabel2",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "viewsIcon2",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "timeAgoLabel2",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "voteIcon2",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "timeAgoLabel2",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "submissionVotesLabel2",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "timeAgoLabel2",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "userNameLabel2",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "userNamePrefixLabel2",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "subversePrefixLabel2",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "userNamePrefixLabel2",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "subverseButton2",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "userNamePrefixLabel2",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "externalLinkButton2",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "userNamePrefixLabel2",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "externalLinkSeparator2",
+                    "withItemAttribute": "NSLayoutAttributeCenterY",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "userNamePrefixLabel2",
+                    "toItemAttribute": "NSLayoutAttributeCenterY",
+                    "multiplier": "1",
+                    "constant": "1"
+                  },
+                  {
+                    "withItem": "subverseUnderline2",
+                    "withItemAttribute": "NSLayoutAttributeWidth",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "subverseButton2",
+                    "toItemAttribute": "NSLayoutAttributeWidth",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "subverseUnderline2",
+                    "withItemAttribute": "NSLayoutAttributeLeading",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "subverseButton2",
+                    "toItemAttribute": "NSLayoutAttributeLeading",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "userNameUnderline2",
+                    "withItemAttribute": "NSLayoutAttributeWidth",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "userNameLabel2",
+                    "toItemAttribute": "NSLayoutAttributeWidth",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "userNameUnderline2",
+                    "withItemAttribute": "NSLayoutAttributeLeading",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "userNameLabel2",
+                    "toItemAttribute": "NSLayoutAttributeLeading",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "externalLinkUnderline2",
+                    "withItemAttribute": "NSLayoutAttributeWidth",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "externalLinkButton2",
+                    "toItemAttribute": "NSLayoutAttributeWidth",
+                    "multiplier": "1",
+                    "constant": ""
+                  },
+                  {
+                    "withItem": "externalLinkUnderline2",
+                    "withItemAttribute": "NSLayoutAttributeLeading",
+                    "relatedBy": "NSLayoutRelationEqual",
+                    "toItem": "externalLinkButton2",
+                    "toItemAttribute": "NSLayoutAttributeLeading",
+                    "multiplier": "1",
+                    "constant": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "visualFormat": "H:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[header_background]-(-2)-|"
+          },
+          {
+            "visualFormat": "H:|-0-[subverse_table_view]-(-2)-|"
+          },
+          {
+            "visualFormat": "V:|-0-[header_background(==64)]-0-[subverse_table_view]-0-|"
+          }
+        ]
+      }
+    ],
+    "constraints": [
+      {
+        "visualFormat": "H:|-0-[content_wrapper]-0-|"
+      },
+      {
+        "visualFormat": "V:|-(-64)-[content_wrapper]-0-|"
+      }
+    ]
+  }
+}

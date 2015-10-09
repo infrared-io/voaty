@@ -1,0 +1,177 @@
+{
+  "id": "voaty_submission_comment",
+  "controller": {
+    "supportedInterfaceOrientations": "UIInterfaceOrientationPortrait | UIInterfaceOrientationPortraitUpsideDown",
+    "title": "New comment",
+    "preferredStatusBarStyle": "UIStatusBarStyleLightContent",
+    "navigationController": {
+      "autoAddIfNeeded": true,
+      "hideNavigationBar": false,
+      "navigationBarTranslucent": true,
+      "navigationBarTintColor": "#ffffff00",
+      "navigationTintColor": "#ffffff",
+      "navigationTitleColor": "#ffffff",
+      "navigationTitleFont": "HelveticaNeue-Light, 22",
+      "backIndicatorImage": "back_arrow@2x.png",
+      "backIndicatorNoText": true,
+      "rightBarButtonItem_": {
+        "id": "right_bar_button",
+        "type": "barButtonItem",
+        "style": "UIBarButtonItemStyleBordered",
+        "title": "Submit",
+        "actions": "this.submitComment();"
+      }
+    },
+    "keyboardManager_": {
+      "enable": true,
+      "enableAutoToolbar": false
+    }
+  },
+  "view": {
+    "id": "whole_ui",
+    "type": "view",
+    "backgroundColor": "#404040",
+    "subviews": [
+      {
+        "id": "content_wrapper",
+        "type": "view",
+        "subviews": [
+          {
+            "id": "screen_background",
+            "type": "imageView",
+            "image": "all_background.png"
+          },
+          {
+            "id": "header_background",
+            "type": "view"
+          },
+          {
+            "id" : "new_comment_holder",
+            "type" : "view",
+            "backgroundColor_": "#ff000080",
+            "subviews": [
+              {
+                "id": "segmented_control",
+                "type": "segmentedControl",
+                "tintColor": "#ffffff",
+                "valueChangedActions": "this.switchComment(control);",
+                "segments": [
+                  {
+                    "title": "In response to"
+                  },
+                  {
+                    "title": "My comment",
+                    "selected": true
+                  }
+                ]
+              },
+              {
+                "id": "parentComment_tv",
+                "type": "textView",
+                "editable": false,
+                "backgroundColor": "#ff000000",
+                "textColor": "#ffffff",
+                "placeholder_": "Title",
+                "placeholderColor": "#a0a0a0",
+                "textAlignment": "NSTextAlignmentLeft",
+                "borderStyle": "UITextBorderStyleNone",
+                "font": "HelveticaNeue-Light, 16",
+                "dataBinding": [
+                  {
+                    "property": "text",
+                    "data": "this.parentCommentText"
+                  },
+                  {
+                    "property": "hidden",
+                    "data": "this.parentCommentHidden"
+                  }
+                ]
+              },
+              {
+                "id": "myComment_tv_holder",
+                "type": "view",
+                "backgroundColor_": "#ff000040",
+                "autoLayoutKeyboardHandling": true,
+                "dataBinding": [
+                  {
+                    "property": "hidden",
+                    "data": "this.myCommentHidden"
+                  }
+                ],
+                "subviews": [
+                  {
+                    "id": "myComment_tv",
+                    "type": "textView",
+                    "backgroundColor_": "#00ff0040",
+                    "textColor": "#ffffff",
+                    "textAlignment": "NSTextAlignmentLeft",
+                    "font": "HelveticaNeue-Light, 16",
+                    "borderWidth": "0.5",
+                    "borderColor": "#ffffff",
+                    "dataBinding": [
+                      {
+                        "property": "text",
+                        "mode": "twoWay",
+                        "data": "this.myCommentText"
+                      }
+                    ]
+                  }
+                ],
+                "constraints": [
+                  {
+                    "visualFormat": "H:|-0-[myComment_tv]-0-|"
+                  },
+                  {
+                    "visualFormat": "V:|-0-[myComment_tv]-16-|"
+                  }
+                ]
+              }
+            ],
+            "constraints": [
+              {
+                "visualFormat": "H:|-16-[segmented_control]-16-|"
+              },
+              {
+                "visualFormat": "H:|-16-[parentComment_tv]-16-|"
+              },
+              {
+                "visualFormat": "H:|-16-[myComment_tv_holder]-16-|"
+              },
+              {
+                "visualFormat": "V:|-16-[segmented_control]-16-[parentComment_tv]-16-|"
+              },
+              {
+                "visualFormat": "V:|-16-[segmented_control]-20-[myComment_tv_holder]-16-|"
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "visualFormat": "H:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[screen_background]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[header_background]-0-|"
+          },
+          {
+            "visualFormat": "H:|-0-[new_comment_holder]-0-|"
+          },
+          {
+            "visualFormat": "V:|-0-[header_background(==64)]-0-[new_comment_holder]-0-|"
+          }
+        ]
+      }
+    ],
+    "constraints": [
+      {
+        "visualFormat": "H:|-0-[content_wrapper]-0-|"
+      },
+      {
+        "visualFormat": "V:|-(-64)-[content_wrapper]-0-|"
+      }
+    ]
+  }
+}
