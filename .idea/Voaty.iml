@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="CIDR_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$/../../AppConveyor/Voaty/Pods/Target Support Files/Infrared">
-      <sourceFolder url="file://$MODULE_DIR$/../../AppConveyor/Voaty/Pods/Target Support Files/Infrared/Infrared-Private.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../AppConveyor/Voaty/Pods/Target Support Files/Infrared/Infrared-dummy.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../AppConveyor/Voaty/Pods/Target Support Files/Infrared/Infrared-prefix.pch" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../AppConveyor/Voaty/Pods/Target Support Files/Infrared/Infrared.xcconfig" isTestSource="false" />
-    </content>
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Podfile" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h" isTestSource="false" />
@@ -315,6 +309,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/IQKeyboardManager/IQKeyboardManager-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/IQKeyboardManager/IQKeyboardManager-prefix.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/IQKeyboardManager/IQKeyboardManager.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Infrared/Infrared-Private.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Infrared/Infrared-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Infrared/Infrared-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Infrared/Infrared.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/MBProgressHUD/MBProgressHUD-Private.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/MBProgressHUD/MBProgressHUD-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch" isTestSource="false" />

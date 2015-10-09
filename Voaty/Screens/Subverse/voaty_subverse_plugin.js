@@ -421,9 +421,7 @@ IR.plugin({
     "openUrl": function (data) {
         var path = data.url;
         var url = NSURL.URLWithString(path);
-        if (UIApplication.sharedApplication().canOpenURL(url)) {
-            UIApplication.sharedApplication().openURL(url);
-        }
+        UIApplication.sharedApplication().openURL(url);
     },
     "showUser": function (data) {
         if (data.userNameUnderlineHidden == false) {
@@ -688,9 +686,7 @@ IR.plugin({
     },
     "openLinkInSafari": function (path) {
         var url = NSURL.URLWithString(path);
-        if (UIApplication.sharedApplication().canOpenURL(url)) {
-            UIApplication.sharedApplication().openURL(url);
-        }
+        UIApplication.sharedApplication().openURL(url);
     },
     // ----------------------------------------------------------------------------------------------------------------
     // Getters/Setters

@@ -372,9 +372,7 @@ IR.plugin({
     },
     "openLinkInSafari": function (path) {
         var url = NSURL.URLWithString(path);
-        if (UIApplication.sharedApplication().canOpenURL(url)) {
-            UIApplication.sharedApplication().openURL(url);
-        }
+        UIApplication.sharedApplication().openURL(url);
     },
     "gaScreenName": null,
     "username": null,
