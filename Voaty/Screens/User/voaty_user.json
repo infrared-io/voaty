@@ -57,168 +57,6 @@
                 "type": "view"
               },
               {
-                "id": "user_image",
-                "type": "imageView",
-                "backgroundColor": "#808080",
-                "cornerRadius": 9,
-                "borderColor": "#ffffff",
-                "borderWidth": 1,
-                "dataBinding": [
-                  {
-                    "property": "image",
-                    "data": "this.userInfo.profilePicture"
-                  }
-                ]
-              },
-              {
-                "id": "user_bio",
-                "type": "label",
-                "textAlignment": "NSTextAlignmentLeft",
-                "textColor": "#ffffff",
-                "font": "HelveticaNeue-Light, 18",
-                "numberOfLines": 0,
-                "adjustsFontSizeToFitWidth": true,
-                "minimumScaleFactor": 0.5,
-                "lineBreakMode": "NSLineBreakByTruncatingTail",
-                "dataBinding": [
-                  {
-                    "property": "text",
-                    "data": "this.userInfo.bio"
-                  }
-                ]
-              },
-              {
-                "id": "time_ago_value_label",
-                "type": "label",
-                "text": "134 d",
-                "font": "HelveticaNeue-Light, 14",
-                "textColor": "#ffffff",
-                "dataBinding": [
-                  {
-                    "property": "text",
-                    "data": "this.userInfo.timeAgoRegistration"
-                  }
-                ],
-                "constraints": [
-                  {
-                    "priority": 250,
-                    "contentRelationType": "compressionResistance",
-                    "forAxis": "UILayoutConstraintAxisHorizontal"
-                  },
-                  {
-                    "priority": 750,
-                    "contentRelationType": "hugging",
-                    "forAxis": "UILayoutConstraintAxisHorizontal"
-                  }
-                ]
-              },
-              {
-                "id": "scp_label",
-                "type": "label",
-                "text": "SCP:",
-                "font": "HelveticaNeue-Light, 14",
-                "textColor": "#ffffff",
-                "constraints": [
-                  {
-                    "priority": 250,
-                    "contentRelationType": "compressionResistance",
-                    "forAxis": "UILayoutConstraintAxisHorizontal"
-                  },
-                  {
-                    "priority": 750,
-                    "contentRelationType": "hugging",
-                    "forAxis": "UILayoutConstraintAxisHorizontal"
-                  }
-                ]
-              },
-              {
-                "id": "scp_value_label",
-                "type": "label",
-                "text": "4",
-                "font": "HelveticaNeue-Light, 14",
-                "textColor": "#ffffff",
-                "dataBinding": [
-                  {
-                    "property": "text",
-                    "data": "this.userInfo.submissionPoints.sum"
-                  }
-                ],
-                "constraints": [
-                  {
-                    "priority": 250,
-                    "contentRelationType": "compressionResistance",
-                    "forAxis": "UILayoutConstraintAxisHorizontal"
-                  },
-                  {
-                    "priority": 750,
-                    "contentRelationType": "hugging",
-                    "forAxis": "UILayoutConstraintAxisHorizontal"
-                  }
-                ]
-              },
-              {
-                "id": "ccp_label",
-                "type": "label",
-                "text": "CCP:",
-                "font": "HelveticaNeue-Light, 14",
-                "textColor": "#ffffff",
-                "constraints": [
-                  {
-                    "priority": 250,
-                    "contentRelationType": "compressionResistance",
-                    "forAxis": "UILayoutConstraintAxisHorizontal"
-                  },
-                  {
-                    "priority": 750,
-                    "contentRelationType": "hugging",
-                    "forAxis": "UILayoutConstraintAxisHorizontal"
-                  }
-                ]
-              },
-              {
-                "id": "ccp_value_label",
-                "type": "label",
-                "text": "29",
-                "font": "HelveticaNeue-Light, 14",
-                "textColor": "#ffffff",
-                "dataBinding": [
-                  {
-                    "property": "text",
-                    "data": "this.userInfo.commentPoints.sum"
-                  }
-                ],
-                "constraints": [
-                  {
-                    "priority": 750,
-                    "contentRelationType": "compressionResistance",
-                    "forAxis": "UILayoutConstraintAxisHorizontal"
-                  },
-                  {
-                    "priority": 250,
-                    "contentRelationType": "hugging",
-                    "forAxis": "UILayoutConstraintAxisHorizontal"
-                  }
-                ]
-              },
-              {
-                "id": "segmented_control",
-                "type": "segmentedControl",
-                "tintColor": "#ffffff",
-                "valueChangedActions": "this.switchUserContent(control);",
-                "segments": [
-                  {
-                    "title": "Submissions",
-                    "selected": true
-                  },
-                  {
-                    "title": "Comments"
-                  },
-                  {
-                    "title": "Subscriptions"
-                  }
-                ]
-              },
-              {
                 "id": "table_view",
                 "type": "tableView",
                 "separatorStyle": "UITableViewCellSeparatorStyleNone",
@@ -237,9 +75,171 @@
                     "x" : 0,
                     "y" : 0,
                     "width" : 0,
-                    "height" : 42
+                    "height" : 196
                   },
                   "subviews" : [
+                    {
+                      "id": "user_image",
+                      "type": "imageView",
+                      "backgroundColor": "#808080",
+                      "cornerRadius": 9,
+                      "borderColor": "#ffffff",
+                      "borderWidth": 1,
+                      "dataBinding": [
+                        {
+                          "property": "image",
+                          "data": "this.userInfo.profilePicture"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "user_bio",
+                      "type": "label",
+                      "textAlignment": "NSTextAlignmentLeft",
+                      "textColor": "#ffffff",
+                      "font": "HelveticaNeue-Light, 18",
+                      "numberOfLines": 0,
+                      "adjustsFontSizeToFitWidth": true,
+                      "minimumScaleFactor": 0.5,
+                      "lineBreakMode": "NSLineBreakByTruncatingTail",
+                      "dataBinding": [
+                        {
+                          "property": "text",
+                          "data": "this.userInfo.bio"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "time_ago_value_label",
+                      "type": "label",
+                      "text": "134 d",
+                      "font": "HelveticaNeue-Light, 14",
+                      "textColor": "#ffffff",
+                      "dataBinding": [
+                        {
+                          "property": "text",
+                          "data": "this.userInfo.timeAgoRegistration"
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "priority": 250,
+                          "contentRelationType": "compressionResistance",
+                          "forAxis": "UILayoutConstraintAxisHorizontal"
+                        },
+                        {
+                          "priority": 750,
+                          "contentRelationType": "hugging",
+                          "forAxis": "UILayoutConstraintAxisHorizontal"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "scp_label",
+                      "type": "label",
+                      "text": "SCP:",
+                      "font": "HelveticaNeue-Light, 14",
+                      "textColor": "#ffffff",
+                      "constraints": [
+                        {
+                          "priority": 250,
+                          "contentRelationType": "compressionResistance",
+                          "forAxis": "UILayoutConstraintAxisHorizontal"
+                        },
+                        {
+                          "priority": 750,
+                          "contentRelationType": "hugging",
+                          "forAxis": "UILayoutConstraintAxisHorizontal"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "scp_value_label",
+                      "type": "label",
+                      "text": "4",
+                      "font": "HelveticaNeue-Light, 14",
+                      "textColor": "#ffffff",
+                      "dataBinding": [
+                        {
+                          "property": "text",
+                          "data": "this.userInfo.submissionPoints.sum"
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "priority": 250,
+                          "contentRelationType": "compressionResistance",
+                          "forAxis": "UILayoutConstraintAxisHorizontal"
+                        },
+                        {
+                          "priority": 750,
+                          "contentRelationType": "hugging",
+                          "forAxis": "UILayoutConstraintAxisHorizontal"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ccp_label",
+                      "type": "label",
+                      "text": "CCP:",
+                      "font": "HelveticaNeue-Light, 14",
+                      "textColor": "#ffffff",
+                      "constraints": [
+                        {
+                          "priority": 250,
+                          "contentRelationType": "compressionResistance",
+                          "forAxis": "UILayoutConstraintAxisHorizontal"
+                        },
+                        {
+                          "priority": 750,
+                          "contentRelationType": "hugging",
+                          "forAxis": "UILayoutConstraintAxisHorizontal"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ccp_value_label",
+                      "type": "label",
+                      "text": "29",
+                      "font": "HelveticaNeue-Light, 14",
+                      "textColor": "#ffffff",
+                      "dataBinding": [
+                        {
+                          "property": "text",
+                          "data": "this.userInfo.commentPoints.sum"
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "priority": 750,
+                          "contentRelationType": "compressionResistance",
+                          "forAxis": "UILayoutConstraintAxisHorizontal"
+                        },
+                        {
+                          "priority": 250,
+                          "contentRelationType": "hugging",
+                          "forAxis": "UILayoutConstraintAxisHorizontal"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "segmented_control",
+                      "type": "segmentedControl",
+                      "tintColor": "#ffffff",
+                      "valueChangedActions": "this.switchUserContent(control);",
+                      "segments": [
+                        {
+                          "title": "Submissions",
+                          "selected": true
+                        },
+                        {
+                          "title": "Comments"
+                        },
+                        {
+                          "title": "Subscriptions"
+                        }
+                      ]
+                    },
                     {
                       "id" : "backgroundWithBorder",
                       "type" : "view",
@@ -272,19 +272,76 @@
                   ],
                   "constraints" : [
                     {
-                      "visualFormat": "H:|-16-[backgroundWithBorder]-16-|"
+                      "visualFormat": "H:|-16-[user_image(==92)]-16-[user_bio]-16-|"
                     },
                     {
-                      "visualFormat": "V:|-4-[backgroundWithBorder]-4-|"
+                      "visualFormat": "H:[user_image]-16-[time_ago_value_label]-12-[scp_label]-4-[scp_value_label]-12-[ccp_label]-4-[ccp_value_label]"
+                    },
+                    {
+                      "visualFormat": "H:|-16-[segmented_control]-16-|"
+                    },
+                    {
+                      "visualFormat": "V:|-8-[user_image(==92)]-16-[segmented_control(==30)]-12-[backgroundWithBorder]-4-|"
+                    },
+                    {
+                      "visualFormat": "V:[segmented_control]-12-[searchTextField]-4-|"
+                    },
+                    {
+                      "visualFormat": "V:[segmented_control]-12-[clearButton]-4-|"
+                    },
+                    {
+                      "visualFormat": "V:|-8-[user_bio]-4-[time_ago_value_label(==20)]-16-[segmented_control]"
+                    },
+                    {
+                      "visualFormat": "H:|-16-[backgroundWithBorder]-16-|"
                     },
                     {
                       "visualFormat": "H:|-32-[searchTextField]-0-[clearButton(==35)]-20-|"
                     },
                     {
-                      "visualFormat": "V:|-4-[searchTextField]-4-|"
+                      "visualFormat_": "V:|-4-[clearButton]-4-|"
                     },
                     {
-                      "visualFormat": "V:|-4-[clearButton]-4-|"
+                      "visualFormat_": "V:|-4-[searchTextField]-4-|"
+                    },
+                    {
+                      "visualFormat_": "V:|-4-[backgroundWithBorder]-4-|"
+                    },
+                    {
+                      "withItem": "scp_label",
+                      "withItemAttribute": "NSLayoutAttributeCenterY",
+                      "relatedBy": "NSLayoutRelationEqual",
+                      "toItem": "time_ago_value_label",
+                      "toItemAttribute": "NSLayoutAttributeCenterY",
+                      "multiplier": "1",
+                      "constant": ""
+                    },
+                    {
+                      "withItem": "scp_value_label",
+                      "withItemAttribute": "NSLayoutAttributeCenterY",
+                      "relatedBy": "NSLayoutRelationEqual",
+                      "toItem": "time_ago_value_label",
+                      "toItemAttribute": "NSLayoutAttributeCenterY",
+                      "multiplier": "1",
+                      "constant": ""
+                    },
+                    {
+                      "withItem": "ccp_label",
+                      "withItemAttribute": "NSLayoutAttributeCenterY",
+                      "relatedBy": "NSLayoutRelationEqual",
+                      "toItem": "time_ago_value_label",
+                      "toItemAttribute": "NSLayoutAttributeCenterY",
+                      "multiplier": "1",
+                      "constant": ""
+                    },
+                    {
+                      "withItem": "ccp_value_label",
+                      "withItemAttribute": "NSLayoutAttributeCenterY",
+                      "relatedBy": "NSLayoutRelationEqual",
+                      "toItem": "time_ago_value_label",
+                      "toItemAttribute": "NSLayoutAttributeCenterY",
+                      "multiplier": "1",
+                      "constant": ""
                     }
                   ]
                 },
@@ -1026,58 +1083,10 @@
                 "visualFormat": "H:|-0-[header_background]-(-2)-|"
               },
               {
-                "visualFormat": "H:|-16-[user_image(==92)]-16-[user_bio]-16-|"
-              },
-              {
-                "visualFormat": "H:[user_image]-16-[time_ago_value_label]-12-[scp_label]-4-[scp_value_label]-12-[ccp_label]-4-[ccp_value_label]"
-              },
-              {
-                "visualFormat": "H:|-16-[segmented_control]-16-|"
-              },
-              {
                 "visualFormat": "H:|-0-[table_view]-(-2)-|"
               },
               {
-                "visualFormat": "V:|-0-[header_background(==64)]-8-[user_image(==92)]-16-[segmented_control(==30)]-8-[table_view]-0-|"
-              },
-              {
-                "visualFormat": "V:[header_background]-8-[user_bio]-4-[time_ago_value_label(==20)]-16-[segmented_control]"
-              },
-              {
-                "withItem": "scp_label",
-                "withItemAttribute": "NSLayoutAttributeCenterY",
-                "relatedBy": "NSLayoutRelationEqual",
-                "toItem": "time_ago_value_label",
-                "toItemAttribute": "NSLayoutAttributeCenterY",
-                "multiplier": "1",
-                "constant": ""
-              },
-              {
-                "withItem": "scp_value_label",
-                "withItemAttribute": "NSLayoutAttributeCenterY",
-                "relatedBy": "NSLayoutRelationEqual",
-                "toItem": "time_ago_value_label",
-                "toItemAttribute": "NSLayoutAttributeCenterY",
-                "multiplier": "1",
-                "constant": ""
-              },
-              {
-                "withItem": "ccp_label",
-                "withItemAttribute": "NSLayoutAttributeCenterY",
-                "relatedBy": "NSLayoutRelationEqual",
-                "toItem": "time_ago_value_label",
-                "toItemAttribute": "NSLayoutAttributeCenterY",
-                "multiplier": "1",
-                "constant": ""
-              },
-              {
-                "withItem": "ccp_value_label",
-                "withItemAttribute": "NSLayoutAttributeCenterY",
-                "relatedBy": "NSLayoutRelationEqual",
-                "toItem": "time_ago_value_label",
-                "toItemAttribute": "NSLayoutAttributeCenterY",
-                "multiplier": "1",
-                "constant": ""
+                "visualFormat": "V:|-0-[header_background(==64)]-0-[table_view]-0-|"
               }
             ]
           }
