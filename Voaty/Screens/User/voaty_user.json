@@ -68,6 +68,14 @@
                     "data": "this.tableData"
                   }
                 ],
+                "subviews": [
+                  {
+                    "id": "refreshControl",
+                    "type": "refreshControl",
+                    "tintColor": "#ffffff",
+                    "valueChangedActions": "this.pullToRefreshData(control, event);"
+                  }
+                ],
                 "tableHeaderView" : {
                   "id" : "tableHeaderView1",
                   "type" : "view",

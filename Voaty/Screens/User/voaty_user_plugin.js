@@ -112,9 +112,16 @@ IR.plugin({
                                         this.showViewWithId('user_info_wrapper');
 
                                         this.dismissGlobalHUD();
+
+                                        var refreshControl = this.viewWithId('refreshControl');
+                                        refreshControl.endRefreshing();
                                     }).bind(this),
                                     (function (error) {
                                         this.dismissGlobalHUD();
+
+                                        var refreshControl = this.viewWithId('refreshControl');
+                                        refreshControl.endRefreshing();
+
                                         this.showAlertView(
                                             'Error', 'User\'s data can not be loaded at the moment.\nPlease try again later.',
                                             null,
@@ -124,6 +131,10 @@ IR.plugin({
                             }).bind(this),
                             (function (error) {
                                 this.dismissGlobalHUD();
+
+                                var refreshControl = this.viewWithId('refreshControl');
+                                refreshControl.endRefreshing();
+
                                 this.showAlertView(
                                     'Error', 'User\'s data can not be loaded at the moment.\nPlease try again later.',
                                     null,
@@ -133,6 +144,10 @@ IR.plugin({
                     }).bind(this),
                     (function (error) {
                         this.dismissGlobalHUD();
+
+                        var refreshControl = this.viewWithId('refreshControl');
+                        refreshControl.endRefreshing();
+
                         this.showAlertView(
                             'Error', 'User\'s data can not be loaded at the moment.\nPlease try again later.',
                             null,
@@ -142,6 +157,10 @@ IR.plugin({
             }).bind(this),
             (function (error) {
                 this.dismissGlobalHUD();
+
+                var refreshControl = this.viewWithId('refreshControl');
+                refreshControl.endRefreshing();
+
                 this.showAlertView(
                     'Error', 'User\'s data can not be loaded at the moment.\nPlease try again later.',
                     null,
@@ -186,7 +205,7 @@ IR.plugin({
         this.showActionSheet(
             'Submission Options',
             'this.moreUserOptionsActionSheetButtonPressed(actionSheet, buttonIndex);',
-            'Cancel', null, ['Open user in Safari', 'Refresh content'], null);
+            'Cancel', null, ['Open user in Safari'/*, 'Refresh content'*/], null);
     },
     "moreUserOptionsActionSheetButtonPressed": function (actionSheet, buttonIndex) {
         switch (buttonIndex) {
@@ -194,13 +213,17 @@ IR.plugin({
                 var path = 'https://fakevout.azurewebsites.net/user/' + this.username;
                 this.openLinkInSafari(path);
                 break;
-            case 1: // Refresh content
-                this.reloadUserData();
-                break;
+            //case 1: // Refresh content
+            //    this.reloadUserData();
+            //    break;
         }
     },
+    "pullToRefreshData": function (control, event) {
+        //control.endRefreshing();
+        this.reloadUserData();
+    },
     "reloadUserData": function () {
-        this.showGlobalProgressHUDWithTitle('Refreshing ...');
+        //this.showGlobalProgressHUDWithTitle('Refreshing ...');
         this.loadUserData();
     },
     // ----------------------------------------------------------------------------------------------------------------

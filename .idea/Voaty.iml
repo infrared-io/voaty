@@ -642,6 +642,10 @@
       <sourceFolder url="file://$MODULE_DIR$/../infrared_ios/infrared_ios/Library/Components/Views/TableView/TableViewCell/IRTableViewCellDescriptor.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../infrared_ios/infrared_ios/Library/Components/Views/TableView/TableViewCell/IRTableViewCellDescriptor.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../infrared_ios/infrared_ios/Library/Components/Views/TableView/TableViewCell/UITableViewCellExport.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../infrared_ios/infrared_ios/Library/Components/Views/TableView/TableViewHeaderOrFooter/IRTableViewHeaderOrFooter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../infrared_ios/infrared_ios/Library/Components/Views/TableView/TableViewHeaderOrFooter/IRTableViewHeaderOrFooter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../infrared_ios/infrared_ios/Library/Components/Views/TableView/TableViewHeaderOrFooter/IRTableViewHeaderOrFooterDescriptor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../infrared_ios/infrared_ios/Library/Components/Views/TableView/TableViewHeaderOrFooter/IRTableViewHeaderOrFooterDescriptor.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../infrared_ios/infrared_ios/Library/Components/Views/TableView/UITableViewExport.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../infrared_ios/infrared_ios/Library/Components/Views/TableView/_Observer/IRTableViewObserver.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../infrared_ios/infrared_ios/Library/Components/Views/TableView/_Observer/IRTableViewObserver.m" isTestSource="false" />
@@ -923,6 +927,7 @@
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/InterfaceBuilderKit.framework/Headers" />
           <root url="file://$MODULE_DIR$/Pods/Headers/Private" />
           <root url="file://$MODULE_DIR$/Pods/Headers/Public" />
+          <root url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Headers" />
         </CLASSES>
         <SOURCES>
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers" />
@@ -1015,6 +1020,7 @@
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/InterfaceBuilderKit.framework/Headers" />
           <root url="file://$MODULE_DIR$/Pods/Headers/Private" />
           <root url="file://$MODULE_DIR$/Pods/Headers/Public" />
+          <root url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Headers" />
         </SOURCES>
       </library>
     </orderEntry>

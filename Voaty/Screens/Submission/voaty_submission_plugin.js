@@ -68,7 +68,7 @@ IR.plugin({
             this.updateComponentsWithDataBindingKey('tableData');
         }).bind(this));
 
-        this.viewWithId('comments_table_view').setContentOffsetAnimated({x: 0, y: 42}, true);
+        //this.viewWithId('comments_table_view').setContentOffsetAnimated({x: 0, y: 42}, true);
     },
     "viewWillAppear": function (animated) {
         ga('send', 'pageview', '/voaty_submission');
